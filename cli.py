@@ -90,6 +90,10 @@ def main():
     p6 = sub.add_parser('pull-mail', help='从邮箱拉取 war3-coach 邮件附件 (Mac 侧)')
     p6.add_argument('--conf', default=os.path.expanduser('~/war3-coach-mail.txt'))
     p6.add_argument('--days', type=int, default=30, help='拉取最近 N 天的邮件')
+    p7 = sub.add_parser('report', help='生成单局 HTML 战报 (含教练点评)')
+    p7.add_argument('replay')
+    p7.add_argument('--me', default=None, help='以哪个玩家视角点评 (缺省第一个)')
+    p7.add_argument('-o', '--out', default=None, help='输出路径 (缺省 replay 旁 .report.html)')
     args = ap.parse_args()
     if getattr(args, 'me', None) is None:
         args.me = default_me()
@@ -151,6 +155,29 @@ def main():
             print(f"当前累计: {s['total']} 局, 胜率 {s['winrate']}%, 最近 {s['streak']}")
     elif args.cmd == 'pull-mail':
         _pull_mail(args)
+    elif args.cmd == 'report':
+        _report(args)
+
+
+def _report(args):
+    from report.html import render
+    r = Replay(args.replay)
+    result = analyze(r)
+    doc = render(result, args.replay, me_name=args.me)
+    out = args.out or (args.replay.rsplit('.', 1)[0] + '.report.html')
+    with open(out, 'w', encoding='utf-8') as f:
+        f.write(doc)
+    print(f'战报已生成: {out}')
+    # 顺带打印教练点评纯文本版
+    from analyzer.coach import coach_player
+    me = next((p for p in result['players'].values() if p['name'] == (args.me or '')), None)
+    if me is None:
+        me = next(iter(result['players'].values()))
+    opp = next((p for p in result['players'].values() if p is not me), None)
+    for c in coach_player(me, [opp] if opp else [], r.length_ms // 1000):
+        mark = {'good': '✓', 'warn': '!', 'info': '·'}.get(c['level'], '·')
+        print(f'  [{mark}] {c["title"]}')
+        print(f'        {c["body"]}')
 
 
 def _pull_mail(args):

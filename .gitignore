@@ -6,3 +6,5 @@ dist/
 sync.txt
 mail.txt
 replays/
+samples/*.analysis.json
+samples/*.report.html

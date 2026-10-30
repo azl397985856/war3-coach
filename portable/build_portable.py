@@ -125,7 +125,7 @@ def main():
     # 3. app/ = 代码 + w3g.py + 单位表
     app = os.path.join(STAGE, 'app')
     os.makedirs(app)
-    for name in ('cli.py', 'parser', 'analyzer', 'store', 'sync.py'):
+    for name in ('cli.py', 'parser', 'analyzer', 'store', 'sync.py', 'report'):
         src = os.path.join(REPO, name)
         if os.path.isfile(src):
             shutil.copy2(src, app)
