@@ -84,6 +84,12 @@ def main():
     p4 = sub.add_parser('lookup', help='查对手交手史')
     p4.add_argument('name')
     p4.add_argument('--me', default=None)
+    p5 = sub.add_parser('pull', help='从云端信箱拉回录像+对手库 (Mac 侧)')
+    p5.add_argument('--conf', default=os.path.expanduser('~/war3-coach-sync.txt'))
+    p5.add_argument('--into', default=None, help='回放落盘目录 (缺省 本仓 replays/)')
+    p6 = sub.add_parser('pull-mail', help='从邮箱拉取 war3-coach 邮件附件 (Mac 侧)')
+    p6.add_argument('--conf', default=os.path.expanduser('~/war3-coach-mail.txt'))
+    p6.add_argument('--days', type=int, default=30, help='拉取最近 N 天的邮件')
     args = ap.parse_args()
     if getattr(args, 'me', None) is None:
         args.me = default_me()
@@ -121,6 +127,98 @@ def main():
         for x in rows:
             print(f"  {x['date']}  {x['map']}  我{x['my_race']} vs {x['opp_race']}"
                   f"  {'胜' if x['won'] else '负'}  他: {'->'.join(x['opp_heroes'])}")
+    elif args.cmd == 'pull':
+        import sync
+        conf, _ = sync.load_conf(os.path.dirname(args.conf))
+        if not conf and os.path.exists(args.conf):
+            # 直接给的是文件路径, load_conf 只找目录, 这里手工读
+            conf = {}
+            for line in open(args.conf, encoding='utf-8-sig'):
+                line = line.strip()
+                if '=' in line and not line.startswith('#'):
+                    k, v = line.split('=', 1)
+                    conf[k.strip()] = v.strip()
+        if not (conf and conf.get('token') and conf.get('repo')):
+            print(f'配置文件没有读到: {args.conf} (两行: token=... / repo=用户名/war3-coach-sync)')
+            sys.exit(1)
+        here = os.path.dirname(os.path.abspath(__file__))
+        into = args.into or os.path.join(here, 'replays')
+        db_local = os.path.join(here, 'data', 'opponents.json')
+        db_added, rep_added = sync.pull_all(conf, into, db_local)
+        print(f'\n拉取完成: 对手库新增 {db_added} 局, 回放新增 {rep_added} 个 ({into})')
+        s = OpponentDB(db_local).my_stats(args.me) if args.me else None
+        if s and s['total']:
+            print(f"当前累计: {s['total']} 局, 胜率 {s['winrate']}%, 最近 {s['streak']}")
+    elif args.cmd == 'pull-mail':
+        _pull_mail(args)
+
+
+def _pull_mail(args):
+    """Mac 侧: IMAP 拉取 war3-coach 邮件的 zip 附件 -> 落盘回放 + 合并对手库"""
+    import imaplib
+    import email
+    import time as _time
+    import zipfile
+    import io as _io
+    import sync
+
+    conf = {}
+    if os.path.exists(args.conf):
+        for line in open(args.conf, encoding='utf-8-sig'):
+            line = line.strip()
+            if '=' in line and not line.startswith('#'):
+                k, v = line.split('=', 1)
+                conf[k.strip()] = v.strip()
+    if not (conf.get('user') and conf.get('pass')):
+        print(f'配置缺失: {args.conf} (三行: user=邮箱 / pass=IMAP授权码 / host=可省)')
+        sys.exit(1)
+    hosts = {'qq.com': 'imap.qq.com', 'foxmail.com': 'imap.qq.com',
+             '163.com': 'imap.163.com', '126.com': 'imap.126.com'}
+    host = conf.get('host') or hosts.get(conf['user'].split('@')[-1].lower())
+    if not host:
+        print('mail 配置缺 host (IMAP 服务器)')
+        sys.exit(1)
+
+    here = os.path.dirname(os.path.abspath(__file__))
+    into = os.path.join(here, 'replays')
+    db_local = os.path.join(here, 'data', 'opponents.json')
+
+    M = imaplib.IMAP4_SSL(host, 993)
+    M.login(conf['user'], conf['pass'])
+    if '163' in host or '126' in host:      # 163/126 IMAP 必须发 ID, 否则拒绝
+        M._simple_command('ID', '("name" "war3-coach" "version" "1.0")')
+        M._untagged_response('OK', [], 'ID')
+    M.select('INBOX')
+    since = _time.strftime('%d-%b-%Y', _time.gmtime(_time.time() - args.days * 86400))
+    typ, data = M.search(None, f'(SINCE "{since}" SUBJECT "war3-coach")')
+    ids = data[0].split()
+    print(f'找到 {len(ids)} 封 war3-coach 邮件')
+    zips = 0
+    for num in ids:
+        typ, d = M.fetch(num, '(RFC822)')
+        msg = email.message_from_bytes(d[0][1])
+        for part in msg.walk():
+            fn = part.get_filename() or ''
+            if not fn.lower().endswith('.zip'):
+                continue
+            raw = part.get_payload(decode=True)
+            zips += 1
+            with zipfile.ZipFile(_io.BytesIO(raw)) as z:
+                for name in z.namelist():
+                    blob = z.read(name)
+                    if name.startswith('replays/'):
+                        dst = os.path.join(into, name[len('replays/'):])
+                        if os.path.exists(dst) and os.path.getsize(dst) == len(blob):
+                            continue
+                        os.makedirs(os.path.dirname(dst), exist_ok=True)
+                        with open(dst, 'wb') as f:
+                            f.write(blob)
+                        print('  收到', name)
+                    elif name == 'state/opponents.json':
+                        _, added = sync.merge_db(db_local, blob)
+                        print(f'  对手库合并: +{added} 局')
+    M.logout()
+    print(f'\n完成: {zips} 个包。之后说一声我就能分析最新这几局。')
 
 
 def _analyze(path):

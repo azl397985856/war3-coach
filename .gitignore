@@ -2,3 +2,7 @@ __pycache__/
 *.pyc
 *.analysis.json
 data/opponents.json
+dist/
+sync.txt
+mail.txt
+replays/
