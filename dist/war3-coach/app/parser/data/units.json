@@ -1,0 +1,6690 @@
+{
+"Hamg": {
+"name": "archmage",
+"race": "uher",
+"level": "5",
+"isbldg": "0",
+"gold": "425",
+"lumber": "100"
+},
+"Hblm": {
+"name": "bloodmage",
+"race": "uher",
+"level": "5",
+"isbldg": "0",
+"gold": "425",
+"lumber": "100"
+},
+"Hmkg": {
+"name": "mountainking",
+"race": "uher",
+"level": "5",
+"isbldg": "0",
+"gold": "425",
+"lumber": "100"
+},
+"Hpal": {
+"name": "paladin",
+"race": "uher",
+"level": "5",
+"isbldg": "0",
+"gold": "425",
+"lumber": "100"
+},
+"hbot": {
+"name": "humantransportship",
+"race": "zz",
+"level": "2",
+"isbldg": "0",
+"gold": "170",
+"lumber": "50"
+},
+"hbsh": {
+"name": "humanbattleship",
+"race": "zz",
+"level": "6",
+"isbldg": "0",
+"gold": "500",
+"lumber": "200"
+},
+"hdes": {
+"name": "humandestroyer",
+"race": "zz",
+"level": "4",
+"isbldg": "0",
+"gold": "250",
+"lumber": "100"
+},
+"hdhw": {
+"name": "dragonhawk",
+"race": "fly2",
+"level": "3",
+"isbldg": "0",
+"gold": "200",
+"lumber": "30"
+},
+"hfoo": {
+"name": "footman",
+"race": "me1",
+"level": "2",
+"isbldg": "0",
+"gold": "135",
+"lumber": "0"
+},
+"hgry": {
+"name": "gryphonrider",
+"race": "fly2",
+"level": "5",
+"isbldg": "0",
+"gold": "280",
+"lumber": "70"
+},
+"hgyr": {
+"name": "flyingmachine",
+"race": "fly1",
+"level": "1",
+"isbldg": "0",
+"gold": "90",
+"lumber": "30"
+},
+"hkni": {
+"name": "knight",
+"race": "me2",
+"level": "4",
+"isbldg": "0",
+"gold": "245",
+"lumber": "60"
+},
+"hmil": {
+"name": "militia",
+"race": "me1",
+"level": "1",
+"isbldg": "0",
+"gold": "75",
+"lumber": "0"
+},
+"hmpr": {
+"name": "priest",
+"race": "cas",
+"level": "2",
+"isbldg": "0",
+"gold": "135",
+"lumber": "10"
+},
+"hmtm": {
+"name": "mortarteam",
+"race": "art",
+"level": "2",
+"isbldg": "0",
+"gold": "180",
+"lumber": "70"
+},
+"hmtt": {
+"name": "siegeengine",
+"race": "art",
+"level": "3",
+"isbldg": "0",
+"gold": "195",
+"lumber": "60"
+},
+"hpea": {
+"name": "peasant",
+"race": "peo",
+"level": "1",
+"isbldg": "0",
+"gold": "75",
+"lumber": "0"
+},
+"hphx": {
+"name": "phoenix",
+"race": "fly2",
+"level": "0",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"hpxe": {
+"name": "phoenixegg",
+"race": "zz",
+"level": "6",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"hrif": {
+"name": "rifleman",
+"race": "ran",
+"level": "3",
+"isbldg": "0",
+"gold": "205",
+"lumber": "30"
+},
+"hrtt": {
+"name": "rocketengine",
+"race": "art",
+"level": "3",
+"isbldg": "0",
+"gold": "195",
+"lumber": "60"
+},
+"hsor": {
+"name": "sorceress",
+"race": "cas",
+"level": "2",
+"isbldg": "0",
+"gold": "155",
+"lumber": "20"
+},
+"hspt": {
+"name": "spellbreaker",
+"race": "me1",
+"level": "3",
+"isbldg": "0",
+"gold": "215",
+"lumber": "30"
+},
+"hwat": {
+"name": "waterelemental1",
+"race": "sum",
+"level": "4",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"hwt2": {
+"name": "waterelemental2",
+"race": "sum",
+"level": "5",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"hwt3": {
+"name": "waterelemental3",
+"race": "sum",
+"level": "6",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"nlv1": {
+"name": "lavaspawn",
+"race": "sum",
+"level": "4",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"nlv2": {
+"name": "lavaspawn2",
+"race": "sum",
+"level": "5",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"nlv3": {
+"name": "lavaspawn3",
+"race": "sum",
+"level": "6",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"halt": {
+"name": "altarofkings",
+"race": "xbui",
+"level": "-",
+"isbldg": "1",
+"gold": "180",
+"lumber": "50"
+},
+"harm": {
+"name": "workshop",
+"race": "xbui",
+"level": "-",
+"isbldg": "1",
+"gold": "140",
+"lumber": "140"
+},
+"hars": {
+"name": "arcanesanctum",
+"race": "xbui",
+"level": "-",
+"isbldg": "1",
+"gold": "150",
+"lumber": "140"
+},
+"hatw": {
+"name": "humanarcanetower",
+"race": "tow",
+"level": "1",
+"isbldg": "1",
+"gold": "100",
+"lumber": "70"
+},
+"hbar": {
+"name": "humanbarracks",
+"race": "xbui",
+"level": "-",
+"isbldg": "1",
+"gold": "160",
+"lumber": "60"
+},
+"hbla": {
+"name": "blacksmith",
+"race": "xbui",
+"level": "-",
+"isbldg": "1",
+"gold": "140",
+"lumber": "60"
+},
+"hcas": {
+"name": "castle",
+"race": "xbui",
+"level": "-",
+"isbldg": "1",
+"gold": "1065",
+"lumber": "625"
+},
+"hctw": {
+"name": "cannontower",
+"race": "tow",
+"level": "1",
+"isbldg": "1",
+"gold": "200",
+"lumber": "120"
+},
+"hgra": {
+"name": "gryphonaviary",
+"race": "xbui",
+"level": "-",
+"isbldg": "1",
+"gold": "140",
+"lumber": "150"
+},
+"hgtw": {
+"name": "guardtower",
+"race": "tow",
+"level": "1",
+"isbldg": "1",
+"gold": "100",
+"lumber": "70"
+},
+"hhou": {
+"name": "farm",
+"race": "xbui",
+"level": "-",
+"isbldg": "1",
+"gold": "80",
+"lumber": "20"
+},
+"hkee": {
+"name": "keep",
+"race": "xbui",
+"level": "-",
+"isbldg": "1",
+"gold": "705",
+"lumber": "415"
+},
+"hlum": {
+"name": "humanlumbermill",
+"race": "xbui",
+"level": "-",
+"isbldg": "1",
+"gold": "120",
+"lumber": "0"
+},
+"hshy": {
+"name": "humanshipyard",
+"race": "xbui",
+"level": "-",
+"isbldg": "1",
+"gold": "50",
+"lumber": "0"
+},
+"htow": {
+"name": "townhall",
+"race": "xbui",
+"level": "-",
+"isbldg": "1",
+"gold": "385",
+"lumber": "205"
+},
+"hvlt": {
+"name": "arcanevault",
+"race": "xbui",
+"level": "-",
+"isbldg": "1",
+"gold": "130",
+"lumber": "30"
+},
+"hwtw": {
+"name": "scouttower",
+"race": "xbui",
+"level": "-",
+"isbldg": "1",
+"gold": "30",
+"lumber": "20"
+},
+"Obla": {
+"name": "blademaster",
+"race": "uher",
+"level": "5",
+"isbldg": "0",
+"gold": "425",
+"lumber": "100"
+},
+"Ofar": {
+"name": "farseer",
+"race": "uher",
+"level": "5",
+"isbldg": "0",
+"gold": "425",
+"lumber": "100"
+},
+"Oshd": {
+"name": "shadowhunter",
+"race": "uher",
+"level": "5",
+"isbldg": "0",
+"gold": "425",
+"lumber": "100"
+},
+"Otch": {
+"name": "taurenchieftain",
+"race": "uher",
+"level": "5",
+"isbldg": "0",
+"gold": "425",
+"lumber": "100"
+},
+"ncat": {
+"name": "demolisherdraenei",
+"race": "art",
+"level": "2",
+"isbldg": "0",
+"gold": "220",
+"lumber": "50"
+},
+"nsw1": {
+"name": "spiritbeast",
+"race": "sum",
+"level": "2",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"nsw2": {
+"name": "spiritbeast2",
+"race": "sum",
+"level": "3",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"nsw3": {
+"name": "spiritbeast3",
+"race": "sum",
+"level": "4",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"nwad": {
+"name": "watcherward",
+"race": "zz",
+"level": "-",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"obot": {
+"name": "orcishtransportship",
+"race": "zz",
+"level": "2",
+"isbldg": "0",
+"gold": "170",
+"lumber": "50"
+},
+"ocat": {
+"name": "demolisher",
+"race": "art",
+"level": "2",
+"isbldg": "0",
+"gold": "220",
+"lumber": "50"
+},
+"odes": {
+"name": "orcishdestroyer",
+"race": "zz",
+"level": "4",
+"isbldg": "0",
+"gold": "250",
+"lumber": "100"
+},
+"odoc": {
+"name": "witchdoctor",
+"race": "cas",
+"level": "2",
+"isbldg": "0",
+"gold": "145",
+"lumber": "25"
+},
+"oeye": {
+"name": "sentryward",
+"race": "zz",
+"level": "-",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"ogru": {
+"name": "grunt",
+"race": "me1",
+"level": "3",
+"isbldg": "0",
+"gold": "200",
+"lumber": "0"
+},
+"ohun": {
+"name": "headhunter",
+"race": "ran",
+"level": "2",
+"isbldg": "0",
+"gold": "135",
+"lumber": "20"
+},
+"ohwd": {
+"name": "healingward",
+"race": "zz",
+"level": "-",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"okod": {
+"name": "kotobeast",
+"race": "xx",
+"level": "4",
+"isbldg": "0",
+"gold": "255",
+"lumber": "60"
+},
+"opeo": {
+"name": "peon",
+"race": "peo",
+"level": "1",
+"isbldg": "0",
+"gold": "75",
+"lumber": "0"
+},
+"orai": {
+"name": "wolfrider",
+"race": "me1",
+"level": "3",
+"isbldg": "0",
+"gold": "180",
+"lumber": "40"
+},
+"oshm": {
+"name": "shaman",
+"race": "cas",
+"level": "2",
+"isbldg": "0",
+"gold": "130",
+"lumber": "20"
+},
+"osp1": {
+"name": "serpentward1",
+"race": "sum",
+"level": "1",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"osp2": {
+"name": "serpentward2",
+"race": "sum",
+"level": "2",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"osp3": {
+"name": "serpentward3",
+"race": "sum",
+"level": "3",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"osp4": {
+"name": "serpentward4",
+"race": "sum",
+"level": "3",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"ospm": {
+"name": "spiritwalkermorph",
+"race": "cas",
+"level": "3",
+"isbldg": "0",
+"gold": "195",
+"lumber": "35"
+},
+"ospw": {
+"name": "spiritwalker",
+"race": "cas",
+"level": "3",
+"isbldg": "0",
+"gold": "195",
+"lumber": "35"
+},
+"osw1": {
+"name": "spiritwolf1",
+"race": "sum",
+"level": "2",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"osw2": {
+"name": "spiritwolf2",
+"race": "sum",
+"level": "4",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"osw3": {
+"name": "spiritwolf3",
+"race": "sum",
+"level": "5",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"otau": {
+"name": "tauren",
+"race": "me2",
+"level": "5",
+"isbldg": "0",
+"gold": "280",
+"lumber": "80"
+},
+"otbk": {
+"name": "berserker",
+"race": "ran",
+"level": "2",
+"isbldg": "0",
+"gold": "135",
+"lumber": "20"
+},
+"otbr": {
+"name": "trollbatrider",
+"race": "fly1",
+"level": "2",
+"isbldg": "0",
+"gold": "160",
+"lumber": "40"
+},
+"otot": {
+"name": "stasistraptotem",
+"race": "zz",
+"level": "-",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"owyv": {
+"name": "windrider",
+"race": "fly2",
+"level": "4",
+"isbldg": "0",
+"gold": "265",
+"lumber": "40"
+},
+"oalt": {
+"name": "altarofstorms",
+"race": "xbui",
+"level": "-",
+"isbldg": "1",
+"gold": "180",
+"lumber": "50"
+},
+"obar": {
+"name": "orcbarracks",
+"race": "xbui",
+"level": "-",
+"isbldg": "1",
+"gold": "180",
+"lumber": "50"
+},
+"obea": {
+"name": "beastiary",
+"race": "xbui",
+"level": "-",
+"isbldg": "1",
+"gold": "145",
+"lumber": "140"
+},
+"ofor": {
+"name": "warmill",
+"race": "xbui",
+"level": "-",
+"isbldg": "1",
+"gold": "205",
+"lumber": "0"
+},
+"ofrt": {
+"name": "fortress",
+"race": "xbui",
+"level": "-",
+"isbldg": "1",
+"gold": "1025",
+"lumber": "565"
+},
+"ogre": {
+"name": "greathall",
+"race": "xbui",
+"level": "-",
+"isbldg": "1",
+"gold": "385",
+"lumber": "185"
+},
+"oshy": {
+"name": "orcshipyard",
+"race": "xbui",
+"level": "-",
+"isbldg": "1",
+"gold": "50",
+"lumber": "0"
+},
+"osld": {
+"name": "spiritlodge",
+"race": "xbui",
+"level": "-",
+"isbldg": "1",
+"gold": "150",
+"lumber": "150"
+},
+"ostr": {
+"name": "stronghold",
+"race": "xbui",
+"level": "-",
+"isbldg": "1",
+"gold": "700",
+"lumber": "375"
+},
+"otrb": {
+"name": "trollburrow",
+"race": "tow",
+"level": "1",
+"isbldg": "1",
+"gold": "160",
+"lumber": "40"
+},
+"otto": {
+"name": "taurentotem",
+"race": "xbui",
+"level": "-",
+"isbldg": "1",
+"gold": "135",
+"lumber": "155"
+},
+"ovln": {
+"name": "voodoolounge",
+"race": "xbui",
+"level": "-",
+"isbldg": "1",
+"gold": "130",
+"lumber": "30"
+},
+"owtw": {
+"name": "watchtower",
+"race": "tow",
+"level": "1",
+"isbldg": "1",
+"gold": "110",
+"lumber": "80"
+},
+"Edem": {
+"name": "demonhunter",
+"race": "uher",
+"level": "5",
+"isbldg": "0",
+"gold": "425",
+"lumber": "100"
+},
+"Edmm": {
+"name": "demonhuntermorphed",
+"race": "uher",
+"level": "5",
+"isbldg": "0",
+"gold": "425",
+"lumber": "100"
+},
+"Ekee": {
+"name": "keeperofthegrove",
+"race": "uher",
+"level": "5",
+"isbldg": "0",
+"gold": "425",
+"lumber": "100"
+},
+"Emoo": {
+"name": "priestessofthemoon",
+"race": "uher",
+"level": "5",
+"isbldg": "0",
+"gold": "425",
+"lumber": "100"
+},
+"Ewar": {
+"name": "warden",
+"race": "uher",
+"level": "5",
+"isbldg": "0",
+"gold": "425",
+"lumber": "100"
+},
+"earc": {
+"name": "archer",
+"race": "ran",
+"level": "2",
+"isbldg": "0",
+"gold": "130",
+"lumber": "10"
+},
+"ebal": {
+"name": "glaivethrower",
+"race": "art",
+"level": "2",
+"isbldg": "0",
+"gold": "210",
+"lumber": "65"
+},
+"ebsh": {
+"name": "nightelfbattleship",
+"race": "zz",
+"level": "6",
+"isbldg": "0",
+"gold": "500",
+"lumber": "200"
+},
+"echm": {
+"name": "chimaera",
+"race": "fly2",
+"level": "5",
+"isbldg": "0",
+"gold": "330",
+"lumber": "70"
+},
+"edcm": {
+"name": "druidoftheclawmorphed",
+"race": "me2",
+"level": "4",
+"isbldg": "0",
+"gold": "255",
+"lumber": "80"
+},
+"edes": {
+"name": "nightelfdestroyer",
+"race": "zz",
+"level": "4",
+"isbldg": "0",
+"gold": "250",
+"lumber": "100"
+},
+"edoc": {
+"name": "druidoftheclaw",
+"race": "cas",
+"level": "4",
+"isbldg": "0",
+"gold": "255",
+"lumber": "80"
+},
+"edot": {
+"name": "druidofthetalon",
+"race": "cas",
+"level": "2",
+"isbldg": "0",
+"gold": "135",
+"lumber": "20"
+},
+"edry": {
+"name": "dryad",
+"race": "ran",
+"level": "3",
+"isbldg": "0",
+"gold": "145",
+"lumber": "60"
+},
+"edtm": {
+"name": "druidofthetalonmorphed",
+"race": "fly1",
+"level": "2",
+"isbldg": "0",
+"gold": "135",
+"lumber": "20"
+},
+"efdr": {
+"name": "faeriedragon",
+"race": "fly1",
+"level": "3",
+"isbldg": "0",
+"gold": "155",
+"lumber": "25"
+},
+"efon": {
+"name": "forceofnature",
+"race": "sum",
+"level": "2",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"ehip": {
+"name": "hippogryph",
+"race": "fly1",
+"level": "2",
+"isbldg": "0",
+"gold": "160",
+"lumber": "20"
+},
+"ehpr": {
+"name": "riddenhippogryph",
+"race": "fly2",
+"level": "4",
+"isbldg": "0",
+"gold": "290",
+"lumber": "30"
+},
+"emtg": {
+"name": "mountaingiant",
+"race": "art",
+"level": "6",
+"isbldg": "0",
+"gold": "425",
+"lumber": "100"
+},
+"esen": {
+"name": "huntress",
+"race": "me1",
+"level": "3",
+"isbldg": "0",
+"gold": "195",
+"lumber": "20"
+},
+"espv": {
+"name": "spiritofvengeance",
+"race": "sum",
+"level": "7",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"even": {
+"name": "vengeance",
+"race": "sum",
+"level": "2",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"ewsp": {
+"name": "wisp",
+"race": "peo",
+"level": "1",
+"isbldg": "0",
+"gold": "60",
+"lumber": "0"
+},
+"eaoe": {
+"name": "ancientoflore",
+"race": "xbui",
+"level": "1",
+"isbldg": "1",
+"gold": "155",
+"lumber": "145"
+},
+"eaom": {
+"name": "ancientofwar",
+"race": "xbui",
+"level": "1",
+"isbldg": "1",
+"gold": "150",
+"lumber": "60"
+},
+"eaow": {
+"name": "ancientofwind",
+"race": "xbui",
+"level": "1",
+"isbldg": "1",
+"gold": "150",
+"lumber": "140"
+},
+"eate": {
+"name": "altarofelders",
+"race": "xbui",
+"level": "-",
+"isbldg": "1",
+"gold": "180",
+"lumber": "50"
+},
+"eden": {
+"name": "ancientofwonders",
+"race": "xbui",
+"level": "1",
+"isbldg": "1",
+"gold": "90",
+"lumber": "30"
+},
+"edob": {
+"name": "huntershall",
+"race": "xbui",
+"level": "-",
+"isbldg": "1",
+"gold": "210",
+"lumber": "100"
+},
+"edos": {
+"name": "chimaeraroost",
+"race": "xbui",
+"level": "-",
+"isbldg": "1",
+"gold": "140",
+"lumber": "190"
+},
+"egol": {
+"name": "entangledgoldmine",
+"race": "xbui",
+"level": "-",
+"isbldg": "1",
+"gold": "0",
+"lumber": "0"
+},
+"emow": {
+"name": "moonwell",
+"race": "xbui",
+"level": "-",
+"isbldg": "1",
+"gold": "180",
+"lumber": "40"
+},
+"eshy": {
+"name": "nightelfshipyard",
+"race": "xbui",
+"level": "-",
+"isbldg": "1",
+"gold": "50",
+"lumber": "0"
+},
+"etoa": {
+"name": "treeofages",
+"race": "xbui",
+"level": "2",
+"isbldg": "1",
+"gold": "660",
+"lumber": "365"
+},
+"etoe": {
+"name": "treeofeternity",
+"race": "xbui",
+"level": "3",
+"isbldg": "1",
+"gold": "990",
+"lumber": "565"
+},
+"etol": {
+"name": "treeoflife",
+"race": "xbui",
+"level": "1",
+"isbldg": "1",
+"gold": "340",
+"lumber": "185"
+},
+"etrp": {
+"name": "ancientprotector",
+"race": "tow",
+"level": "3",
+"isbldg": "1",
+"gold": "135",
+"lumber": "80"
+},
+"Ucrl": {
+"name": "cryptlord",
+"race": "uher",
+"level": "5",
+"isbldg": "0",
+"gold": "425",
+"lumber": "100"
+},
+"Udea": {
+"name": "deathknight",
+"race": "uher",
+"level": "5",
+"isbldg": "0",
+"gold": "425",
+"lumber": "100"
+},
+"Udre": {
+"name": "dreadlord",
+"race": "uher",
+"level": "5",
+"isbldg": "0",
+"gold": "425",
+"lumber": "100"
+},
+"Ulic": {
+"name": "lich",
+"race": "uher",
+"level": "5",
+"isbldg": "0",
+"gold": "425",
+"lumber": "100"
+},
+"uabo": {
+"name": "abomination",
+"race": "me2",
+"level": "4",
+"isbldg": "0",
+"gold": "240",
+"lumber": "70"
+},
+"uaco": {
+"name": "acolyte",
+"race": "peo",
+"level": "1",
+"isbldg": "0",
+"gold": "75",
+"lumber": "0"
+},
+"uban": {
+"name": "banshee",
+"race": "cas",
+"level": "2",
+"isbldg": "0",
+"gold": "155",
+"lumber": "30"
+},
+"ubsp": {
+"name": "obsidiandestroyer",
+"race": "fly2",
+"level": "5",
+"isbldg": "0",
+"gold": "300",
+"lumber": "85"
+},
+"ucrm": {
+"name": "cryptfiendmorph",
+"race": "ran",
+"level": "3",
+"isbldg": "0",
+"gold": "215",
+"lumber": "40"
+},
+"ucry": {
+"name": "cryptfiend",
+"race": "ran",
+"level": "3",
+"isbldg": "0",
+"gold": "215",
+"lumber": "40"
+},
+"ucs1": {
+"name": "carrionscarab1",
+"race": "sum",
+"level": "1",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"ucs2": {
+"name": "carrionscarab2",
+"race": "sum",
+"level": "2",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"ucs3": {
+"name": "carrionscarab3",
+"race": "sum",
+"level": "3",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"ucsB": {
+"name": "carrionscarabburrowed2",
+"race": "sum",
+"level": "2",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"ucsC": {
+"name": "carrionscarabburrowed3",
+"race": "sum",
+"level": "3",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"ufro": {
+"name": "frostwyrm",
+"race": "fly2",
+"level": "6",
+"isbldg": "0",
+"gold": "385",
+"lumber": "120"
+},
+"ugar": {
+"name": "gargoyle",
+"race": "fly1",
+"level": "2",
+"isbldg": "0",
+"gold": "185",
+"lumber": "30"
+},
+"ugho": {
+"name": "ghoul",
+"race": "me1",
+"level": "2",
+"isbldg": "0",
+"gold": "120",
+"lumber": "0"
+},
+"ugrm": {
+"name": "gargoylemorphed",
+"race": "fly1",
+"level": "2",
+"isbldg": "0",
+"gold": "185",
+"lumber": "30"
+},
+"uloc": {
+"name": "locust",
+"race": "sum",
+"level": "0",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"umtw": {
+"name": "meatwagon",
+"race": "art",
+"level": "2",
+"isbldg": "0",
+"gold": "230",
+"lumber": "50"
+},
+"unec": {
+"name": "necromancer",
+"race": "cas",
+"level": "2",
+"isbldg": "0",
+"gold": "145",
+"lumber": "20"
+},
+"uobs": {
+"name": "obsidianstatue",
+"race": "cas",
+"level": "2",
+"isbldg": "0",
+"gold": "200",
+"lumber": "35"
+},
+"uplg": {
+"name": "plagueward",
+"race": "zz",
+"level": "-",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"ushd": {
+"name": "shade",
+"race": "zz",
+"level": "1",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"uske": {
+"name": "skeletonwarrior",
+"race": "sum",
+"level": "1",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"uskm": {
+"name": "skeletalmage",
+"race": "sum",
+"level": "1",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"uubs": {
+"name": "undeadbattleship",
+"race": "zz",
+"level": "6",
+"isbldg": "0",
+"gold": "500",
+"lumber": "200"
+},
+"uaod": {
+"name": "altarofdarkness",
+"race": "xbui",
+"level": "-",
+"isbldg": "1",
+"gold": "180",
+"lumber": "50"
+},
+"ubon": {
+"name": "boneyard",
+"race": "xbui",
+"level": "-",
+"isbldg": "1",
+"gold": "175",
+"lumber": "200"
+},
+"ugol": {
+"name": "undeadgoldmine2",
+"race": "xbui",
+"level": "-",
+"isbldg": "1",
+"gold": "255",
+"lumber": "220"
+},
+"ugrv": {
+"name": "graveyard",
+"race": "xbui",
+"level": "-",
+"isbldg": "1",
+"gold": "215",
+"lumber": "0"
+},
+"unp1": {
+"name": "necropolis1",
+"race": "tow",
+"level": "2",
+"isbldg": "1",
+"gold": "575",
+"lumber": "210"
+},
+"unp2": {
+"name": "necropolis2",
+"race": "tow",
+"level": "3",
+"isbldg": "1",
+"gold": "900",
+"lumber": "440"
+},
+"unpl": {
+"name": "necropolis",
+"race": "xbui",
+"level": "-",
+"isbldg": "1",
+"gold": "255",
+"lumber": "0"
+},
+"usap": {
+"name": "sacrificialpit",
+"race": "xbui",
+"level": "-",
+"isbldg": "1",
+"gold": "75",
+"lumber": "150"
+},
+"usep": {
+"name": "crypt",
+"race": "xbui",
+"level": "-",
+"isbldg": "1",
+"gold": "200",
+"lumber": "50"
+},
+"ushp": {
+"name": "undeadshipyard",
+"race": "xbui",
+"level": "-",
+"isbldg": "1",
+"gold": "50",
+"lumber": "0"
+},
+"uslh": {
+"name": "slaughterhouse",
+"race": "xbui",
+"level": "-",
+"isbldg": "1",
+"gold": "140",
+"lumber": "135"
+},
+"utod": {
+"name": "templeofthedamned",
+"race": "xbui",
+"level": "-",
+"isbldg": "1",
+"gold": "155",
+"lumber": "140"
+},
+"utom": {
+"name": "tombofrelics",
+"race": "xbui",
+"level": "-",
+"isbldg": "1",
+"gold": "130",
+"lumber": "30"
+},
+"uzg1": {
+"name": "ziggurat1",
+"race": "tow",
+"level": "1",
+"isbldg": "1",
+"gold": "295",
+"lumber": "90"
+},
+"uzg2": {
+"name": "frosttower",
+"race": "tow",
+"level": "1",
+"isbldg": "1",
+"gold": "250",
+"lumber": "70"
+},
+"uzig": {
+"name": "ziggurat",
+"race": "xbui",
+"level": "-",
+"isbldg": "1",
+"gold": "150",
+"lumber": "50"
+},
+"Nal2": {
+"name": "alchemistmorph2",
+"race": "uher",
+"level": "5",
+"isbldg": "0",
+"gold": "425",
+"lumber": "135"
+},
+"Nal3": {
+"name": "alchemistmorph3",
+"race": "uher",
+"level": "5",
+"isbldg": "0",
+"gold": "425",
+"lumber": "135"
+},
+"Nalc": {
+"name": "alchemist",
+"race": "uher",
+"level": "5",
+"isbldg": "0",
+"gold": "425",
+"lumber": "135"
+},
+"Nalm": {
+"name": "alchemistmorph",
+"race": "uher",
+"level": "5",
+"isbldg": "0",
+"gold": "425",
+"lumber": "135"
+},
+"Nbrn": {
+"name": "darkranger",
+"race": "uher",
+"level": "5",
+"isbldg": "0",
+"gold": "425",
+"lumber": "135"
+},
+"Nbst": {
+"name": "beastmaster",
+"race": "uher",
+"level": "5",
+"isbldg": "0",
+"gold": "425",
+"lumber": "135"
+},
+"Nfir": {
+"name": "firelord",
+"race": "uher",
+"level": "5",
+"isbldg": "0",
+"gold": "425",
+"lumber": "135"
+},
+"Nngs": {
+"name": "seawitch",
+"race": "uher",
+"level": "5",
+"isbldg": "0",
+"gold": "425",
+"lumber": "135"
+},
+"Npbm": {
+"name": "pandarenbrewmaster",
+"race": "uher",
+"level": "5",
+"isbldg": "0",
+"gold": "425",
+"lumber": "135"
+},
+"Nplh": {
+"name": "pitlord",
+"race": "uher",
+"level": "5",
+"isbldg": "0",
+"gold": "425",
+"lumber": "135"
+},
+"Nrob": {
+"name": "robogoblintinker",
+"race": "uher",
+"level": "5",
+"isbldg": "0",
+"gold": "425",
+"lumber": "135"
+},
+"Ntin": {
+"name": "tinker",
+"race": "uher",
+"level": "5",
+"isbldg": "0",
+"gold": "425",
+"lumber": "135"
+},
+"ncg1": {
+"name": "clockwerkgoblin2",
+"race": "zz",
+"level": "0",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"ncg2": {
+"name": "clockwerkgoblin3",
+"race": "zz",
+"level": "0",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"ncg3": {
+"name": "clockwerkgoblin4",
+"race": "zz",
+"level": "0",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"ncgb": {
+"name": "clockwerkgoblin1",
+"race": "zz",
+"level": "0",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"ndr1": {
+"name": "darkminion1",
+"race": "sum",
+"level": "2",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"ndr2": {
+"name": "darkminion2",
+"race": "sum",
+"level": "3",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"ndr3": {
+"name": "darkminion3",
+"race": "sum",
+"level": "4",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"nfa1": {
+"name": "pocketfactory2",
+"race": "zz",
+"level": "5",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"nfa2": {
+"name": "pocketfactory3",
+"race": "zz",
+"level": "6",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"nfac": {
+"name": "pocketfactory",
+"race": "zz",
+"level": "4",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"ngz1": {
+"name": "grizzlybear1",
+"race": "sum",
+"level": "4",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"ngz2": {
+"name": "grizzlybear2",
+"race": "sum",
+"level": "5",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"ngz3": {
+"name": "grizzlybear3",
+"race": "sum",
+"level": "6",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"ngz4": {
+"name": "misha4",
+"race": "sum",
+"level": "7",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"ngzc": {
+"name": "misha1",
+"race": "sum",
+"level": "4",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"ngzd": {
+"name": "misha2",
+"race": "sum",
+"level": "5",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"npn1": {
+"name": "panda1",
+"race": "zz",
+"level": "6",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"npn2": {
+"name": "panda2",
+"race": "zz",
+"level": "6",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"npn3": {
+"name": "panda3",
+"race": "zz",
+"level": "6",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"npn4": {
+"name": "panda4",
+"race": "zz",
+"level": "8",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"npn5": {
+"name": "panda5",
+"race": "zz",
+"level": "8",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"npn6": {
+"name": "panda6",
+"race": "zz",
+"level": "8",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"nqb1": {
+"name": "quillbeast1",
+"race": "sum",
+"level": "3",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"nqb2": {
+"name": "quillbeast2",
+"race": "sum",
+"level": "4",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"nqb3": {
+"name": "quillbeast3",
+"race": "sum",
+"level": "5",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"nqb4": {
+"name": "quillbeast4",
+"race": "sum",
+"level": "6",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"nwe1": {
+"name": "wareagle1",
+"race": "sum",
+"level": "2",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"nwe2": {
+"name": "wareagle2",
+"race": "sum",
+"level": "5",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"nwe3": {
+"name": "wareagle3",
+"race": "sum",
+"level": "6",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"nadk": {
+"name": "azuredrake",
+"race": "zz",
+"level": "6",
+"isbldg": "0",
+"gold": "365",
+"lumber": "80"
+},
+"nadr": {
+"name": "azuredragon",
+"race": "zz",
+"level": "10",
+"isbldg": "0",
+"gold": "745",
+"lumber": "200"
+},
+"nadw": {
+"name": "azuredragonwhelp",
+"race": "zz",
+"level": "3",
+"isbldg": "0",
+"gold": "215",
+"lumber": "20"
+},
+"nahy": {
+"name": "ancienthydra",
+"race": "zz",
+"level": "10",
+"isbldg": "0",
+"gold": "745",
+"lumber": "200"
+},
+"nanb": {
+"name": "barbedarachnathid",
+"race": "zz",
+"level": "1",
+"isbldg": "0",
+"gold": "95",
+"lumber": "5"
+},
+"nanc": {
+"name": "crystalarachnathid",
+"race": "zz",
+"level": "1",
+"isbldg": "0",
+"gold": "105",
+"lumber": "0"
+},
+"nane": {
+"name": "earthborerarachnathid",
+"race": "zz",
+"level": "4",
+"isbldg": "0",
+"gold": "150",
+"lumber": "10"
+},
+"nanm": {
+"name": "barbedarachnathidmerc",
+"race": "zz",
+"level": "1",
+"isbldg": "0",
+"gold": "95",
+"lumber": "5"
+},
+"nano": {
+"name": "overlordarachnathid",
+"race": "zz",
+"level": "5",
+"isbldg": "0",
+"gold": "255",
+"lumber": "30"
+},
+"nanw": {
+"name": "warriorarachnathid",
+"race": "zz",
+"level": "3",
+"isbldg": "0",
+"gold": "215",
+"lumber": "20"
+},
+"narg": {
+"name": "battlegolem",
+"race": "zz",
+"level": "3",
+"isbldg": "0",
+"gold": "195",
+"lumber": "10"
+},
+"nass": {
+"name": "assassin",
+"race": "zz",
+"level": "4",
+"isbldg": "0",
+"gold": "250",
+"lumber": "30"
+},
+"nba2": {
+"name": "doomguardsummoned",
+"race": "zz",
+"level": "8",
+"isbldg": "0",
+"gold": "480",
+"lumber": "120"
+},
+"nbal": {
+"name": "doomguard",
+"race": "zz",
+"level": "8",
+"isbldg": "0",
+"gold": "480",
+"lumber": "120"
+},
+"nban": {
+"name": "bandit",
+"race": "zz",
+"level": "1",
+"isbldg": "0",
+"gold": "105",
+"lumber": "0"
+},
+"nbda": {
+"name": "bluedragonspawnapprentice",
+"race": "zz",
+"level": "4",
+"isbldg": "0",
+"gold": "195",
+"lumber": "10"
+},
+"nbdk": {
+"name": "blackdrake",
+"race": "zz",
+"level": "6",
+"isbldg": "0",
+"gold": "365",
+"lumber": "80"
+},
+"nbdm": {
+"name": "bluedragonspawnmeddler",
+"race": "zz",
+"level": "3",
+"isbldg": "0",
+"gold": "145",
+"lumber": "0"
+},
+"nbdo": {
+"name": "bluedragonspawnoverseer",
+"race": "zz",
+"level": "8",
+"isbldg": "0",
+"gold": "480",
+"lumber": "120"
+},
+"nbdr": {
+"name": "blackdragonwhelp",
+"race": "zz",
+"level": "3",
+"isbldg": "0",
+"gold": "215",
+"lumber": "20"
+},
+"nbds": {
+"name": "bluedragonspawnsorceror",
+"race": "zz",
+"level": "6",
+"isbldg": "0",
+"gold": "365",
+"lumber": "80"
+},
+"nbdw": {
+"name": "bluedragonspawnwarrior",
+"race": "zz",
+"level": "5",
+"isbldg": "0",
+"gold": "255",
+"lumber": "30"
+},
+"nbld": {
+"name": "banditlord",
+"race": "zz",
+"level": "7",
+"isbldg": "0",
+"gold": "425",
+"lumber": "100"
+},
+"nbnb": {
+"name": "barbedarachnathidburrowed",
+"race": "zz",
+"level": "1",
+"isbldg": "0",
+"gold": "95",
+"lumber": "5"
+},
+"nbot": {
+"name": "transportship",
+"race": "zz",
+"level": "2",
+"isbldg": "0",
+"gold": "170",
+"lumber": "50"
+},
+"nbrg": {
+"name": "brigand",
+"race": "zz",
+"level": "2",
+"isbldg": "0",
+"gold": "150",
+"lumber": "10"
+},
+"nbwm": {
+"name": "blackdragon",
+"race": "zz",
+"level": "10",
+"isbldg": "0",
+"gold": "745",
+"lumber": "200"
+},
+"nbzd": {
+"name": "bronzedragon",
+"race": "zz",
+"level": "10",
+"isbldg": "0",
+"gold": "745",
+"lumber": "200"
+},
+"nbzk": {
+"name": "bronzedrake",
+"race": "zz",
+"level": "6",
+"isbldg": "0",
+"gold": "365",
+"lumber": "80"
+},
+"nbzw": {
+"name": "bronzedragonwhelp",
+"race": "zz",
+"level": "3",
+"isbldg": "0",
+"gold": "215",
+"lumber": "20"
+},
+"ncea": {
+"name": "centaurarcher",
+"race": "zz",
+"level": "2",
+"isbldg": "0",
+"gold": "150",
+"lumber": "10"
+},
+"ncen": {
+"name": "centauroutrunner",
+"race": "zz",
+"level": "4",
+"isbldg": "0",
+"gold": "195",
+"lumber": "0"
+},
+"ncer": {
+"name": "centaurdrudge",
+"race": "zz",
+"level": "2",
+"isbldg": "0",
+"gold": "150",
+"lumber": "10"
+},
+"ncfs": {
+"name": "wateryminioncliffrunner",
+"race": "zz",
+"level": "2",
+"isbldg": "0",
+"gold": "105",
+"lumber": "0"
+},
+"nchp": {
+"name": "chaplain",
+"race": "zz",
+"level": "2",
+"isbldg": "0",
+"gold": "135",
+"lumber": "10"
+},
+"ncim": {
+"name": "centaurimpaler",
+"race": "zz",
+"level": "4",
+"isbldg": "0",
+"gold": "255",
+"lumber": "30"
+},
+"ncks": {
+"name": "centaursorceror",
+"race": "zz",
+"level": "5",
+"isbldg": "0",
+"gold": "320",
+"lumber": "50"
+},
+"ncnk": {
+"name": "centaurkhan",
+"race": "zz",
+"level": "8",
+"isbldg": "0",
+"gold": "480",
+"lumber": "120"
+},
+"ndqn": {
+"name": "succubus",
+"race": "zz",
+"level": "3",
+"isbldg": "0",
+"gold": "225",
+"lumber": "40"
+},
+"ndqp": {
+"name": "maidenofpain",
+"race": "zz",
+"level": "8",
+"isbldg": "0",
+"gold": "480",
+"lumber": "120"
+},
+"ndqs": {
+"name": "queenofsuffering",
+"race": "zz",
+"level": "10",
+"isbldg": "0",
+"gold": "225",
+"lumber": "40"
+},
+"ndqt": {
+"name": "viletemptress",
+"race": "zz",
+"level": "6",
+"isbldg": "0",
+"gold": "225",
+"lumber": "40"
+},
+"ndqv": {
+"name": "viletormentor",
+"race": "zz",
+"level": "5",
+"isbldg": "0",
+"gold": "225",
+"lumber": "40"
+},
+"ndrv": {
+"name": "revenantofthedepths",
+"race": "zz",
+"level": "8",
+"isbldg": "0",
+"gold": "425",
+"lumber": "100"
+},
+"ndtb": {
+"name": "darktrollberserker",
+"race": "zz",
+"level": "4",
+"isbldg": "0",
+"gold": "255",
+"lumber": "30"
+},
+"ndth": {
+"name": "darktrollhighpriest",
+"race": "zz",
+"level": "4",
+"isbldg": "0",
+"gold": "255",
+"lumber": "30"
+},
+"ndtp": {
+"name": "darktrollshadowpriest",
+"race": "zz",
+"level": "2",
+"isbldg": "0",
+"gold": "195",
+"lumber": "10"
+},
+"ndtr": {
+"name": "darktroll",
+"race": "zz",
+"level": "2",
+"isbldg": "0",
+"gold": "150",
+"lumber": "10"
+},
+"ndtt": {
+"name": "darktrolltrapper",
+"race": "zz",
+"level": "3",
+"isbldg": "0",
+"gold": "215",
+"lumber": "20"
+},
+"ndtw": {
+"name": "darktrollwarlord",
+"race": "zz",
+"level": "6",
+"isbldg": "0",
+"gold": "365",
+"lumber": "80"
+},
+"nehy": {
+"name": "elderhydra",
+"race": "zz",
+"level": "7",
+"isbldg": "0",
+"gold": "255",
+"lumber": "30"
+},
+"nelb": {
+"name": "bereserkelemental",
+"race": "zz",
+"level": "8",
+"isbldg": "0",
+"gold": "480",
+"lumber": "120"
+},
+"nele": {
+"name": "enragedelemental",
+"race": "zz",
+"level": "4",
+"isbldg": "0",
+"gold": "255",
+"lumber": "30"
+},
+"nenc": {
+"name": "corruptedent",
+"race": "zz",
+"level": "1",
+"isbldg": "0",
+"gold": "105",
+"lumber": "0"
+},
+"nenf": {
+"name": "enforcer",
+"race": "zz",
+"level": "5",
+"isbldg": "0",
+"gold": "215",
+"lumber": "20"
+},
+"nenp": {
+"name": "poisonent",
+"race": "zz",
+"level": "3",
+"isbldg": "0",
+"gold": "215",
+"lumber": "20"
+},
+"nepl": {
+"name": "plagueent",
+"race": "zz",
+"level": "5",
+"isbldg": "0",
+"gold": "320",
+"lumber": "50"
+},
+"nerd": {
+"name": "eredardiabolist",
+"race": "zz",
+"level": "6",
+"isbldg": "0",
+"gold": "105",
+"lumber": "0"
+},
+"ners": {
+"name": "eredarsorceror",
+"race": "zz",
+"level": "4",
+"isbldg": "0",
+"gold": "105",
+"lumber": "0"
+},
+"nerw": {
+"name": "eredarwarlock",
+"race": "zz",
+"level": "9",
+"isbldg": "0",
+"gold": "545",
+"lumber": "150"
+},
+"nfel": {
+"name": "felstalker",
+"race": "zz",
+"level": "5",
+"isbldg": "0",
+"gold": "320",
+"lumber": "50"
+},
+"nfgb": {
+"name": "bloodfiend",
+"race": "zz",
+"level": "4",
+"isbldg": "0",
+"gold": "170",
+"lumber": "0"
+},
+"nfgo": {
+"name": "forgottenone",
+"race": "zz",
+"level": "15",
+"isbldg": "1",
+"gold": "745",
+"lumber": "250"
+},
+"nfgt": {
+"name": "tentacle",
+"race": "zz",
+"level": "1",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"nfgu": {
+"name": "felguard",
+"race": "zz",
+"level": "2",
+"isbldg": "0",
+"gold": "170",
+"lumber": "0"
+},
+"nfod": {
+"name": "facelessonedeathbringer",
+"race": "zz",
+"level": "10",
+"isbldg": "0",
+"gold": "745",
+"lumber": "200"
+},
+"nfor": {
+"name": "facelessonetrickster",
+"race": "zz",
+"level": "6",
+"isbldg": "0",
+"gold": "255",
+"lumber": "30"
+},
+"nfot": {
+"name": "facelessoneterror",
+"race": "zz",
+"level": "8",
+"isbldg": "0",
+"gold": "480",
+"lumber": "120"
+},
+"nfov": {
+"name": "overlord",
+"race": "zz",
+"level": "6",
+"isbldg": "0",
+"gold": "170",
+"lumber": "0"
+},
+"nfpc": {
+"name": "polarfurbolgchampion",
+"race": "zz",
+"level": "7",
+"isbldg": "0",
+"gold": "425",
+"lumber": "100"
+},
+"nfpe": {
+"name": "polarfurbolgeldershaman",
+"race": "zz",
+"level": "8",
+"isbldg": "0",
+"gold": "480",
+"lumber": "120"
+},
+"nfpl": {
+"name": "polarfurbolg",
+"race": "zz",
+"level": "4",
+"isbldg": "0",
+"gold": "255",
+"lumber": "30"
+},
+"nfps": {
+"name": "polarfurbolgshaman",
+"race": "zz",
+"level": "4",
+"isbldg": "0",
+"gold": "275",
+"lumber": "30"
+},
+"nfpt": {
+"name": "polarfurbolgtracker",
+"race": "zz",
+"level": "6",
+"isbldg": "0",
+"gold": "365",
+"lumber": "80"
+},
+"nfpu": {
+"name": "polarfurbolgursawarrior",
+"race": "zz",
+"level": "8",
+"isbldg": "0",
+"gold": "480",
+"lumber": "120"
+},
+"nfra": {
+"name": "furbolgancient",
+"race": "zz",
+"level": "8",
+"isbldg": "0",
+"gold": "480",
+"lumber": "120"
+},
+"nfrb": {
+"name": "furbolgtracker",
+"race": "zz",
+"level": "6",
+"isbldg": "0",
+"gold": "365",
+"lumber": "80"
+},
+"nfre": {
+"name": "furbolgeldershaman",
+"race": "zz",
+"level": "7",
+"isbldg": "0",
+"gold": "425",
+"lumber": "100"
+},
+"nfrg": {
+"name": "furbolgchampion",
+"race": "zz",
+"level": "7",
+"isbldg": "0",
+"gold": "425",
+"lumber": "100"
+},
+"nfrl": {
+"name": "furbolg",
+"race": "zz",
+"level": "4",
+"isbldg": "0",
+"gold": "255",
+"lumber": "30"
+},
+"nfrp": {
+"name": "furbolgpanda",
+"race": "zz",
+"level": "4",
+"isbldg": "0",
+"gold": "255",
+"lumber": "30"
+},
+"nfrs": {
+"name": "furbolgshaman",
+"race": "zz",
+"level": "4",
+"isbldg": "0",
+"gold": "255",
+"lumber": "30"
+},
+"nfsh": {
+"name": "foresttrollhighpriest",
+"race": "zz",
+"level": "4",
+"isbldg": "0",
+"gold": "305",
+"lumber": "40"
+},
+"nfsp": {
+"name": "foresttrollshadowpriest",
+"race": "zz",
+"level": "2",
+"isbldg": "0",
+"gold": "195",
+"lumber": "10"
+},
+"nftb": {
+"name": "foresttrollberserker",
+"race": "zz",
+"level": "4",
+"isbldg": "0",
+"gold": "245",
+"lumber": "30"
+},
+"nftk": {
+"name": "foresttrollking",
+"race": "zz",
+"level": "6",
+"isbldg": "0",
+"gold": "365",
+"lumber": "80"
+},
+"nftr": {
+"name": "foresttroll",
+"race": "zz",
+"level": "2",
+"isbldg": "0",
+"gold": "150",
+"lumber": "10"
+},
+"nftt": {
+"name": "foresttrolltrapper",
+"race": "zz",
+"level": "3",
+"isbldg": "0",
+"gold": "215",
+"lumber": "20"
+},
+"ngdk": {
+"name": "greendrake",
+"race": "zz",
+"level": "6",
+"isbldg": "0",
+"gold": "365",
+"lumber": "80"
+},
+"nggr": {
+"name": "granitegolem",
+"race": "zz",
+"level": "9",
+"isbldg": "0",
+"gold": "545",
+"lumber": "150"
+},
+"ngh1": {
+"name": "ghost",
+"race": "zz",
+"level": "3",
+"isbldg": "0",
+"gold": "215",
+"lumber": "20"
+},
+"ngh2": {
+"name": "wraith",
+"race": "zz",
+"level": "6",
+"isbldg": "0",
+"gold": "365",
+"lumber": "80"
+},
+"ngir": {
+"name": "goblinshredder",
+"race": "zz",
+"level": "4",
+"isbldg": "0",
+"gold": "375",
+"lumber": "100"
+},
+"nglm": {
+"name": "goblinlandmine",
+"race": "zz",
+"level": "-",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"ngna": {
+"name": "gnollpoacher",
+"race": "zz",
+"level": "1",
+"isbldg": "0",
+"gold": "105",
+"lumber": "0"
+},
+"ngnb": {
+"name": "gnollbrute",
+"race": "zz",
+"level": "3",
+"isbldg": "0",
+"gold": "215",
+"lumber": "20"
+},
+"ngno": {
+"name": "gnoll1",
+"race": "zz",
+"level": "1",
+"isbldg": "0",
+"gold": "105",
+"lumber": "0"
+},
+"ngns": {
+"name": "gnollassassin",
+"race": "zz",
+"level": "3",
+"isbldg": "0",
+"gold": "215",
+"lumber": "20"
+},
+"ngnv": {
+"name": "gnollking",
+"race": "zz",
+"level": "5",
+"isbldg": "0",
+"gold": "305",
+"lumber": "35"
+},
+"ngnw": {
+"name": "gnoll3",
+"race": "zz",
+"level": "3",
+"isbldg": "0",
+"gold": "215",
+"lumber": "20"
+},
+"ngrd": {
+"name": "greendragon",
+"race": "zz",
+"level": "10",
+"isbldg": "0",
+"gold": "745",
+"lumber": "200"
+},
+"ngrk": {
+"name": "mudgolem",
+"race": "zz",
+"level": "2",
+"isbldg": "0",
+"gold": "145",
+"lumber": "10"
+},
+"ngrw": {
+"name": "greendragonwhelp",
+"race": "zz",
+"level": "3",
+"isbldg": "0",
+"gold": "215",
+"lumber": "20"
+},
+"ngsp": {
+"name": "goblinsapper",
+"race": "zz",
+"level": "4",
+"isbldg": "0",
+"gold": "215",
+"lumber": "100"
+},
+"ngst": {
+"name": "rockgolem",
+"race": "zz",
+"level": "6",
+"isbldg": "0",
+"gold": "365",
+"lumber": "80"
+},
+"ngza": {
+"name": "misha3",
+"race": "sum",
+"level": "6",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"nhar": {
+"name": "harpyscout",
+"race": "zz",
+"level": "1",
+"isbldg": "0",
+"gold": "150",
+"lumber": "0"
+},
+"nhdc": {
+"name": "deceiver",
+"race": "zz",
+"level": "3",
+"isbldg": "0",
+"gold": "215",
+"lumber": "20"
+},
+"nhfp": {
+"name": "fallenpriest",
+"race": "zz",
+"level": "1",
+"isbldg": "0",
+"gold": "105",
+"lumber": "0"
+},
+"nhhr": {
+"name": "heretic",
+"race": "zz",
+"level": "5",
+"isbldg": "0",
+"gold": "320",
+"lumber": "50"
+},
+"nhrh": {
+"name": "harpyhag",
+"race": "zz",
+"level": "5",
+"isbldg": "0",
+"gold": "320",
+"lumber": "50"
+},
+"nhrq": {
+"name": "harpyqueen",
+"race": "zz",
+"level": "7",
+"isbldg": "0",
+"gold": "365",
+"lumber": "80"
+},
+"nhrr": {
+"name": "harpyrogue",
+"race": "zz",
+"level": "3",
+"isbldg": "0",
+"gold": "215",
+"lumber": "20"
+},
+"nhrw": {
+"name": "harpywitch",
+"race": "zz",
+"level": "3",
+"isbldg": "0",
+"gold": "240",
+"lumber": "30"
+},
+"nhyc": {
+"name": "campaignturtle",
+"race": "zzn",
+"level": "5",
+"isbldg": "0",
+"gold": "320",
+"lumber": "65"
+},
+"nhyd": {
+"name": "hydra",
+"race": "zz",
+"level": "6",
+"isbldg": "0",
+"gold": "255",
+"lumber": "30"
+},
+"nhyh": {
+"name": "hydrahatchling",
+"race": "zz",
+"level": "3",
+"isbldg": "0",
+"gold": "255",
+"lumber": "30"
+},
+"nhym": {
+"name": "hydromancer",
+"race": "zz",
+"level": "2",
+"isbldg": "0",
+"gold": "155",
+"lumber": "20"
+},
+"nina": {
+"name": "infernaljuggernaut",
+"race": "zz",
+"level": "10",
+"isbldg": "0",
+"gold": "275",
+"lumber": "50"
+},
+"ninc": {
+"name": "infernalcontraption",
+"race": "zz",
+"level": "5",
+"isbldg": "0",
+"gold": "275",
+"lumber": "50"
+},
+"ninf": {
+"name": "infernal",
+"race": "zz",
+"level": "8",
+"isbldg": "0",
+"gold": "480",
+"lumber": "120"
+},
+"ninm": {
+"name": "infernalmachine",
+"race": "zz",
+"level": "8",
+"isbldg": "0",
+"gold": "275",
+"lumber": "50"
+},
+"nith": {
+"name": "icetrollhighpriest",
+"race": "zz",
+"level": "4",
+"isbldg": "0",
+"gold": "255",
+"lumber": "30"
+},
+"nitp": {
+"name": "icetrollshadowpriest",
+"race": "zz",
+"level": "2",
+"isbldg": "0",
+"gold": "195",
+"lumber": "10"
+},
+"nitr": {
+"name": "icetroll",
+"race": "zz",
+"level": "2",
+"isbldg": "0",
+"gold": "150",
+"lumber": "10"
+},
+"nits": {
+"name": "icetrollberserker",
+"race": "zz",
+"level": "4",
+"isbldg": "0",
+"gold": "245",
+"lumber": "30"
+},
+"nitt": {
+"name": "icetrolltrapper",
+"race": "zz",
+"level": "3",
+"isbldg": "0",
+"gold": "200",
+"lumber": "20"
+},
+"nitw": {
+"name": "icetrollwarlord",
+"race": "zz",
+"level": "6",
+"isbldg": "0",
+"gold": "365",
+"lumber": "80"
+},
+"njg1": {
+"name": "junglestalker",
+"race": "zz",
+"level": "3",
+"isbldg": "0",
+"gold": "215",
+"lumber": "20"
+},
+"njga": {
+"name": "elderjunglestalker",
+"race": "zz",
+"level": "6",
+"isbldg": "0",
+"gold": "375",
+"lumber": "0"
+},
+"njgb": {
+"name": "enrangedjunglestalker",
+"race": "zz",
+"level": "9",
+"isbldg": "0",
+"gold": "545",
+"lumber": "150"
+},
+"nkob": {
+"name": "kobold",
+"race": "zz",
+"level": "1",
+"isbldg": "0",
+"gold": "90",
+"lumber": "0"
+},
+"nkog": {
+"name": "koboldgeomancer",
+"race": "zz",
+"level": "3",
+"isbldg": "0",
+"gold": "255",
+"lumber": "30"
+},
+"nkol": {
+"name": "koboldtaskmaster",
+"race": "zz",
+"level": "5",
+"isbldg": "0",
+"gold": "320",
+"lumber": "50"
+},
+"nkot": {
+"name": "kobolttunneler",
+"race": "zz",
+"level": "3",
+"isbldg": "0",
+"gold": "215",
+"lumber": "20"
+},
+"nlds": {
+"name": "lobstrokkdeepseer",
+"race": "zz",
+"level": "5",
+"isbldg": "0",
+"gold": "500",
+"lumber": "100"
+},
+"nlkl": {
+"name": "lobstrokktidallord",
+"race": "zz",
+"level": "7",
+"isbldg": "0",
+"gold": "105",
+"lumber": "0"
+},
+"nlpd": {
+"name": "lobstrokkpooldweller",
+"race": "zz",
+"level": "2",
+"isbldg": "0",
+"gold": "105",
+"lumber": "0"
+},
+"nlpr": {
+"name": "lobstrokkprawn",
+"race": "zz",
+"level": "1",
+"isbldg": "0",
+"gold": "105",
+"lumber": "0"
+},
+"nlps": {
+"name": "lobstrokkprawnsummoned",
+"race": "zz",
+"level": "1",
+"isbldg": "0",
+"gold": "105",
+"lumber": "0"
+},
+"nlrv": {
+"name": "deeplordrevenant",
+"race": "zz",
+"level": "10",
+"isbldg": "0",
+"gold": "745",
+"lumber": "200"
+},
+"nlsn": {
+"name": "lobstrokksnapper",
+"race": "zz",
+"level": "5",
+"isbldg": "0",
+"gold": "315",
+"lumber": "0"
+},
+"nltc": {
+"name": "lobstrokktidecaller",
+"race": "zz",
+"level": "2",
+"isbldg": "0",
+"gold": "105",
+"lumber": "0"
+},
+"nltl": {
+"name": "lightninglizard",
+"race": "zz",
+"level": "2",
+"isbldg": "0",
+"gold": "195",
+"lumber": "10"
+},
+"nlur": {
+"name": "monsterlure",
+"race": "zz",
+"level": "-",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"nmam": {
+"name": "mammoth",
+"race": "zz",
+"level": "3",
+"isbldg": "0",
+"gold": "255",
+"lumber": "30"
+},
+"nmbg": {
+"name": "murgulbloodgill",
+"race": "zz",
+"level": "2",
+"isbldg": "0",
+"gold": "105",
+"lumber": "0"
+},
+"nmcf": {
+"name": "murgulcliffrunner",
+"race": "zz",
+"level": "1",
+"isbldg": "0",
+"gold": "105",
+"lumber": "0"
+},
+"nmdr": {
+"name": "diremammoth",
+"race": "zz",
+"level": "8",
+"isbldg": "0",
+"gold": "480",
+"lumber": "120"
+},
+"nmfs": {
+"name": "murlocflesheater",
+"race": "zz",
+"level": "3",
+"isbldg": "0",
+"gold": "140",
+"lumber": "0"
+},
+"nmgd": {
+"name": "magnataurdestroyer",
+"race": "zz",
+"level": "10",
+"isbldg": "0",
+"gold": "745",
+"lumber": "200"
+},
+"nmgr": {
+"name": "magnataurreaver",
+"race": "zz",
+"level": "8",
+"isbldg": "0",
+"gold": "255",
+"lumber": "30"
+},
+"nmgw": {
+"name": "magnataurwarrior",
+"race": "zz",
+"level": "5",
+"isbldg": "0",
+"gold": "340",
+"lumber": "15"
+},
+"nmit": {
+"name": "icetuskmammoth",
+"race": "zz",
+"level": "5",
+"isbldg": "0",
+"gold": "255",
+"lumber": "30"
+},
+"nmmu": {
+"name": "murlocmutant",
+"race": "zz",
+"level": "6",
+"isbldg": "0",
+"gold": "365",
+"lumber": "80"
+},
+"nmpg": {
+"name": "murlocplaguebearer",
+"race": "zz",
+"level": "2",
+"isbldg": "0",
+"gold": "105",
+"lumber": "0"
+},
+"nmrl": {
+"name": "murloctiderunner",
+"race": "zz",
+"level": "1",
+"isbldg": "0",
+"gold": "105",
+"lumber": "0"
+},
+"nmrm": {
+"name": "murlocnightcrawler",
+"race": "zz",
+"level": "3",
+"isbldg": "0",
+"gold": "215",
+"lumber": "20"
+},
+"nmrr": {
+"name": "murlochuntsman",
+"race": "zz",
+"level": "2",
+"isbldg": "0",
+"gold": "150",
+"lumber": "10"
+},
+"nmrv": {
+"name": "murgulreaver",
+"race": "zz",
+"level": "6",
+"isbldg": "0",
+"gold": "105",
+"lumber": "0"
+},
+"nmsc": {
+"name": "murgulshadowcaster",
+"race": "zz",
+"level": "7",
+"isbldg": "0",
+"gold": "105",
+"lumber": "0"
+},
+"nmsn": {
+"name": "murgulsnarecaster",
+"race": "zz",
+"level": "4",
+"isbldg": "0",
+"gold": "215",
+"lumber": "20"
+},
+"nmtw": {
+"name": "murgultidewarrior",
+"race": "zz",
+"level": "3",
+"isbldg": "0",
+"gold": "105",
+"lumber": "0"
+},
+"nmyr": {
+"name": "nagamyrmidon",
+"race": "zzn",
+"level": "4",
+"isbldg": "0",
+"gold": "225",
+"lumber": "55"
+},
+"nmys": {
+"name": "nagamyrmidonmorph",
+"race": "zzn",
+"level": "4",
+"isbldg": "0",
+"gold": "225",
+"lumber": "55"
+},
+"nndk": {
+"name": "netherdrake",
+"race": "zz",
+"level": "6",
+"isbldg": "0",
+"gold": "365",
+"lumber": "80"
+},
+"nndr": {
+"name": "netherdragon",
+"race": "zz",
+"level": "10",
+"isbldg": "0",
+"gold": "745",
+"lumber": "200"
+},
+"nnht": {
+"name": "netherdragonhatchling",
+"race": "zz",
+"level": "3",
+"isbldg": "0",
+"gold": "215",
+"lumber": "20"
+},
+"nnmg": {
+"name": "nagamurgul",
+"race": "zzn",
+"level": "2",
+"isbldg": "0",
+"gold": "120",
+"lumber": "0"
+},
+"nnrg": {
+"name": "nagaroyalguard",
+"race": "zzn",
+"level": "6",
+"isbldg": "0",
+"gold": "300",
+"lumber": "100"
+},
+"nnrs": {
+"name": "nagaroyalguardmorph",
+"race": "zzn",
+"level": "6",
+"isbldg": "0",
+"gold": "300",
+"lumber": "100"
+},
+"nnsu": {
+"name": "summoner",
+"race": "zzn",
+"level": "2",
+"isbldg": "0",
+"gold": "130",
+"lumber": "20"
+},
+"nnsw": {
+"name": "siren",
+"race": "zzn",
+"level": "2",
+"isbldg": "0",
+"gold": "130",
+"lumber": "20"
+},
+"nnwa": {
+"name": "nerubianwarrior",
+"race": "zz",
+"level": "3",
+"isbldg": "0",
+"gold": "215",
+"lumber": "0"
+},
+"nnwl": {
+"name": "nerubianwebspinner",
+"race": "zz",
+"level": "3",
+"isbldg": "0",
+"gold": "200",
+"lumber": "35"
+},
+"nnwq": {
+"name": "nerubianqueen",
+"race": "zz",
+"level": "7",
+"isbldg": "0",
+"gold": "425",
+"lumber": "100"
+},
+"nnwr": {
+"name": "nerubianseer",
+"race": "zz",
+"level": "5",
+"isbldg": "0",
+"gold": "320",
+"lumber": "50"
+},
+"nnws": {
+"name": "nerubianspiderlord",
+"race": "zz",
+"level": "5",
+"isbldg": "0",
+"gold": "320",
+"lumber": "50"
+},
+"noga": {
+"name": "stonemaulwarchief",
+"race": "zz",
+"level": "11",
+"isbldg": "0",
+"gold": "750",
+"lumber": "150"
+},
+"nogl": {
+"name": "ogrelord",
+"race": "zz",
+"level": "7",
+"isbldg": "0",
+"gold": "425",
+"lumber": "100"
+},
+"nogm": {
+"name": "ogre2",
+"race": "zz",
+"level": "5",
+"isbldg": "0",
+"gold": "300",
+"lumber": "0"
+},
+"nogn": {
+"name": "stonemaulmagi",
+"race": "zz",
+"level": "7",
+"isbldg": "0",
+"gold": "450",
+"lumber": "40"
+},
+"nogo": {
+"name": "stonemaulogre",
+"race": "zz",
+"level": "6",
+"isbldg": "0",
+"gold": "375",
+"lumber": "0"
+},
+"nogr": {
+"name": "ogre1",
+"race": "zz",
+"level": "3",
+"isbldg": "0",
+"gold": "150",
+"lumber": "0"
+},
+"nomg": {
+"name": "ogremagi",
+"race": "zz",
+"level": "5",
+"isbldg": "0",
+"gold": "320",
+"lumber": "50"
+},
+"nowb": {
+"name": "owlbear",
+"race": "zz",
+"level": "4",
+"isbldg": "0",
+"gold": "195",
+"lumber": "0"
+},
+"nowe": {
+"name": "enragedowlbear",
+"race": "zz",
+"level": "6",
+"isbldg": "0",
+"gold": "365",
+"lumber": "80"
+},
+"nowk": {
+"name": "berserkowlbear",
+"race": "zz",
+"level": "8",
+"isbldg": "0",
+"gold": "480",
+"lumber": "120"
+},
+"npfl": {
+"name": "purplefelstalker",
+"race": "zz",
+"level": "3",
+"isbldg": "0",
+"gold": "155",
+"lumber": "0"
+},
+"npfm": {
+"name": "felravager",
+"race": "zz",
+"level": "7",
+"isbldg": "0",
+"gold": "320",
+"lumber": "50"
+},
+"nplb": {
+"name": "polarbear",
+"race": "zz",
+"level": "4",
+"isbldg": "0",
+"gold": "195",
+"lumber": "0"
+},
+"nplg": {
+"name": "giantpolarbear",
+"race": "zz",
+"level": "6",
+"isbldg": "0",
+"gold": "365",
+"lumber": "80"
+},
+"nqbh": {
+"name": "quillboarhunter",
+"race": "zz",
+"level": "3",
+"isbldg": "0",
+"gold": "215",
+"lumber": "20"
+},
+"nrdk": {
+"name": "reddragonwhelp",
+"race": "zz",
+"level": "3",
+"isbldg": "0",
+"gold": "215",
+"lumber": "20"
+},
+"nrdr": {
+"name": "reddrake",
+"race": "zz",
+"level": "6",
+"isbldg": "0",
+"gold": "365",
+"lumber": "80"
+},
+"nrel": {
+"name": "reefelemental",
+"race": "zz",
+"level": "2",
+"isbldg": "0",
+"gold": "170",
+"lumber": "0"
+},
+"nrog": {
+"name": "rogue",
+"race": "zz",
+"level": "3",
+"isbldg": "0",
+"gold": "150",
+"lumber": "0"
+},
+"nrvd": {
+"name": "deathrevenant",
+"race": "zz",
+"level": "9",
+"isbldg": "0",
+"gold": "545",
+"lumber": "150"
+},
+"nrvf": {
+"name": "firerevenant",
+"race": "zz",
+"level": "3",
+"isbldg": "0",
+"gold": "215",
+"lumber": "20"
+},
+"nrvi": {
+"name": "icerevenant",
+"race": "zz",
+"level": "8",
+"isbldg": "0",
+"gold": "480",
+"lumber": "120"
+},
+"nrvl": {
+"name": "lightningrevenant",
+"race": "zz",
+"level": "6",
+"isbldg": "0",
+"gold": "365",
+"lumber": "80"
+},
+"nrvs": {
+"name": "frostrevenant",
+"race": "zz",
+"level": "4",
+"isbldg": "0",
+"gold": "255",
+"lumber": "30"
+},
+"nrwm": {
+"name": "reddragon",
+"race": "zz",
+"level": "10",
+"isbldg": "0",
+"gold": "745",
+"lumber": "200"
+},
+"nrzb": {
+"name": "razormanebrute",
+"race": "zz",
+"level": "3",
+"isbldg": "0",
+"gold": "215",
+"lumber": "20"
+},
+"nrzg": {
+"name": "razormanechieftain",
+"race": "zz",
+"level": "7",
+"isbldg": "0",
+"gold": "425",
+"lumber": "100"
+},
+"nrzm": {
+"name": "razormanemedicineman",
+"race": "zz",
+"level": "5",
+"isbldg": "0",
+"gold": "350",
+"lumber": "60"
+},
+"nrzs": {
+"name": "razormanescout",
+"race": "zz",
+"level": "1",
+"isbldg": "0",
+"gold": "105",
+"lumber": "0"
+},
+"nrzt": {
+"name": "quillboar",
+"race": "zz",
+"level": "1",
+"isbldg": "0",
+"gold": "105",
+"lumber": "0"
+},
+"nsat": {
+"name": "satyrtrickster",
+"race": "zz",
+"level": "1",
+"isbldg": "0",
+"gold": "105",
+"lumber": "0"
+},
+"nsbm": {
+"name": "broodmother",
+"race": "zz",
+"level": "6",
+"isbldg": "0",
+"gold": "365",
+"lumber": "80"
+},
+"nsbs": {
+"name": "snapdragonmorph",
+"race": "zzn",
+"level": "3",
+"isbldg": "0",
+"gold": "200",
+"lumber": "25"
+},
+"nsc2": {
+"name": "spidercrab2",
+"race": "zz",
+"level": "3",
+"isbldg": "0",
+"gold": "150",
+"lumber": "0"
+},
+"nsc3": {
+"name": "spidercrab3",
+"race": "zz",
+"level": "5",
+"isbldg": "0",
+"gold": "300",
+"lumber": "0"
+},
+"nsca": {
+"name": "skeletalarchersummoned",
+"race": "zz",
+"level": "1",
+"isbldg": "0",
+"gold": "105",
+"lumber": "0"
+},
+"nscb": {
+"name": "spidercrab",
+"race": "zz",
+"level": "1",
+"isbldg": "0",
+"gold": "105",
+"lumber": "0"
+},
+"nsce": {
+"name": "skeletonsummoned",
+"race": "zz",
+"level": "1",
+"isbldg": "0",
+"gold": "105",
+"lumber": "0"
+},
+"nsel": {
+"name": "seaelemental",
+"race": "zz",
+"level": "5",
+"isbldg": "0",
+"gold": "170",
+"lumber": "0"
+},
+"nsgb": {
+"name": "seagiantbehemoth",
+"race": "zz",
+"level": "8",
+"isbldg": "0",
+"gold": "265",
+"lumber": "85"
+},
+"nsgg": {
+"name": "siegegolem",
+"race": "zz",
+"level": "9",
+"isbldg": "0",
+"gold": "545",
+"lumber": "150"
+},
+"nsgh": {
+"name": "seagianthunter",
+"race": "zz",
+"level": "5",
+"isbldg": "0",
+"gold": "265",
+"lumber": "85"
+},
+"nsgn": {
+"name": "seagiant",
+"race": "zz",
+"level": "3",
+"isbldg": "0",
+"gold": "265",
+"lumber": "85"
+},
+"nsgt": {
+"name": "giantspider",
+"race": "zz",
+"level": "4",
+"isbldg": "0",
+"gold": "255",
+"lumber": "30"
+},
+"nska": {
+"name": "skeletalarcher",
+"race": "zz",
+"level": "1",
+"isbldg": "0",
+"gold": "105",
+"lumber": "0"
+},
+"nske": {
+"name": "skeleton",
+"race": "zz",
+"level": "1",
+"isbldg": "0",
+"gold": "105",
+"lumber": "0"
+},
+"nskf": {
+"name": "burningarcher",
+"race": "zz",
+"level": "3",
+"isbldg": "0",
+"gold": "225",
+"lumber": "25"
+},
+"nskg": {
+"name": "giantskeleton",
+"race": "zz",
+"level": "3",
+"isbldg": "0",
+"gold": "165",
+"lumber": "0"
+},
+"nskm": {
+"name": "skeletalmarksman",
+"race": "zz",
+"level": "3",
+"isbldg": "0",
+"gold": "215",
+"lumber": "20"
+},
+"nsko": {
+"name": "skeletalorc",
+"race": "zz",
+"level": "3",
+"isbldg": "0",
+"gold": "90",
+"lumber": "0"
+},
+"nslf": {
+"name": "sludgeflinger",
+"race": "zz",
+"level": "3",
+"isbldg": "0",
+"gold": "255",
+"lumber": "30"
+},
+"nslh": {
+"name": "salamanderhatchling",
+"race": "zz",
+"level": "3",
+"isbldg": "0",
+"gold": "215",
+"lumber": "20"
+},
+"nsll": {
+"name": "salamanderlord",
+"race": "zz",
+"level": "10",
+"isbldg": "0",
+"gold": "745",
+"lumber": "200"
+},
+"nslm": {
+"name": "sludgeminion",
+"race": "zz",
+"level": "1",
+"isbldg": "0",
+"gold": "105",
+"lumber": "0"
+},
+"nsln": {
+"name": "sludgemonstrosity",
+"race": "zz",
+"level": "5",
+"isbldg": "0",
+"gold": "320",
+"lumber": "50"
+},
+"nslr": {
+"name": "salamander",
+"race": "zz",
+"level": "5",
+"isbldg": "0",
+"gold": "320",
+"lumber": "50"
+},
+"nslv": {
+"name": "salamandervizier",
+"race": "zz",
+"level": "7",
+"isbldg": "0",
+"gold": "425",
+"lumber": "100"
+},
+"nsnp": {
+"name": "snapdragon",
+"race": "zzn",
+"level": "3",
+"isbldg": "0",
+"gold": "200",
+"lumber": "25"
+},
+"nsns": {
+"name": "wateryminionsnarecaster",
+"race": "zz",
+"level": "3",
+"isbldg": "0",
+"gold": "320",
+"lumber": "50"
+},
+"nsoc": {
+"name": "skeletalorcchampion",
+"race": "zz",
+"level": "8",
+"isbldg": "0",
+"gold": "90",
+"lumber": "0"
+},
+"nsog": {
+"name": "skeletalorcgrunt",
+"race": "zz",
+"level": "5",
+"isbldg": "0",
+"gold": "300",
+"lumber": "0"
+},
+"nspb": {
+"name": "spiderblack",
+"race": "zz",
+"level": "1",
+"isbldg": "0",
+"gold": "105",
+"lumber": "0"
+},
+"nspd": {
+"name": "spiderling",
+"race": "zz",
+"level": "1",
+"isbldg": "0",
+"gold": "105",
+"lumber": "0"
+},
+"nspg": {
+"name": "forestspider",
+"race": "zz",
+"level": "1",
+"isbldg": "0",
+"gold": "105",
+"lumber": "0"
+},
+"nspp": {
+"name": "spiritpig",
+"race": "zz",
+"level": "2",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"nspr": {
+"name": "spider",
+"race": "zz",
+"level": "1",
+"isbldg": "0",
+"gold": "105",
+"lumber": "0"
+},
+"nsqa": {
+"name": "ancientsasquatch",
+"race": "zz",
+"level": "9",
+"isbldg": "0",
+"gold": "545",
+"lumber": "150"
+},
+"nsqe": {
+"name": "eldersasquatch",
+"race": "zz",
+"level": "6",
+"isbldg": "0",
+"gold": "365",
+"lumber": "80"
+},
+"nsqo": {
+"name": "sasquatchoracle",
+"race": "zz",
+"level": "7",
+"isbldg": "0",
+"gold": "425",
+"lumber": "100"
+},
+"nsqt": {
+"name": "sasquatch",
+"race": "zz",
+"level": "5",
+"isbldg": "0",
+"gold": "320",
+"lumber": "50"
+},
+"nsra": {
+"name": "stormreaverapprentice",
+"race": "zz",
+"level": "1",
+"isbldg": "0",
+"gold": "105",
+"lumber": "5"
+},
+"nsrh": {
+"name": "stormreaverhermit",
+"race": "zz",
+"level": "3",
+"isbldg": "0",
+"gold": "180",
+"lumber": "20"
+},
+"nsrn": {
+"name": "stormreavernecrolyte",
+"race": "zz",
+"level": "6",
+"isbldg": "0",
+"gold": "180",
+"lumber": "20"
+},
+"nsrv": {
+"name": "revenantoftheseas",
+"race": "zz",
+"level": "5",
+"isbldg": "0",
+"gold": "255",
+"lumber": "30"
+},
+"nsrw": {
+"name": "stormreaverwarlock",
+"race": "zz",
+"level": "9",
+"isbldg": "0",
+"gold": "545",
+"lumber": "150"
+},
+"nssp": {
+"name": "spittingspider",
+"race": "zz",
+"level": "3",
+"isbldg": "0",
+"gold": "215",
+"lumber": "20"
+},
+"nsth": {
+"name": "satyrhellcaller",
+"race": "zz",
+"level": "9",
+"isbldg": "0",
+"gold": "480",
+"lumber": "120"
+},
+"nstl": {
+"name": "satyrsoulstealer",
+"race": "zz",
+"level": "5",
+"isbldg": "0",
+"gold": "320",
+"lumber": "50"
+},
+"nsts": {
+"name": "satyrshadowdancer",
+"race": "zz",
+"level": "3",
+"isbldg": "0",
+"gold": "255",
+"lumber": "30"
+},
+"nstw": {
+"name": "stormwyrm",
+"race": "zz",
+"level": "9",
+"isbldg": "0",
+"gold": "545",
+"lumber": "150"
+},
+"nsty": {
+"name": "satyr",
+"race": "zz",
+"level": "1",
+"isbldg": "0",
+"gold": "105",
+"lumber": "0"
+},
+"nthl": {
+"name": "thunderlizard",
+"race": "zz",
+"level": "6",
+"isbldg": "0",
+"gold": "365",
+"lumber": "150"
+},
+"ntka": {
+"name": "tuskarrspearman",
+"race": "zz",
+"level": "2",
+"isbldg": "0",
+"gold": "150",
+"lumber": "10"
+},
+"ntkc": {
+"name": "tuskarrchieftain",
+"race": "zz",
+"level": "7",
+"isbldg": "0",
+"gold": "425",
+"lumber": "100"
+},
+"ntkf": {
+"name": "tuskarrfighter",
+"race": "zz",
+"level": "2",
+"isbldg": "0",
+"gold": "170",
+"lumber": "0"
+},
+"ntkh": {
+"name": "tuskarrhealer",
+"race": "zz",
+"level": "3",
+"isbldg": "0",
+"gold": "215",
+"lumber": "20"
+},
+"ntks": {
+"name": "tuskarrsorceror",
+"race": "zz",
+"level": "5",
+"isbldg": "0",
+"gold": "195",
+"lumber": "10"
+},
+"ntkt": {
+"name": "tuskarrtrapper",
+"race": "zz",
+"level": "4",
+"isbldg": "0",
+"gold": "280",
+"lumber": "40"
+},
+"ntkw": {
+"name": "tuskarrwarrior",
+"race": "zz",
+"level": "4",
+"isbldg": "0",
+"gold": "255",
+"lumber": "30"
+},
+"ntor": {
+"name": "tornado",
+"race": "sum",
+"level": "4",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"ntrd": {
+"name": "dragonturtle",
+"race": "zz",
+"level": "10",
+"isbldg": "0",
+"gold": "745",
+"lumber": "200"
+},
+"ntrg": {
+"name": "gargantuanseaturtle",
+"race": "zz",
+"level": "7",
+"isbldg": "0",
+"gold": "255",
+"lumber": "30"
+},
+"ntrh": {
+"name": "seaturtlehatchling",
+"race": "zz",
+"level": "1",
+"isbldg": "0",
+"gold": "105",
+"lumber": "0"
+},
+"ntrs": {
+"name": "seaturtle",
+"race": "zz",
+"level": "2",
+"isbldg": "0",
+"gold": "255",
+"lumber": "30"
+},
+"ntrt": {
+"name": "giantseaturtle",
+"race": "zz",
+"level": "4",
+"isbldg": "0",
+"gold": "295",
+"lumber": "35"
+},
+"ntrv": {
+"name": "revenantofthetides",
+"race": "zz",
+"level": "3",
+"isbldg": "0",
+"gold": "255",
+"lumber": "30"
+},
+"ntws": {
+"name": "wateryminiontidewarrior",
+"race": "zz",
+"level": "2",
+"isbldg": "0",
+"gold": "105",
+"lumber": "0"
+},
+"nubk": {
+"name": "unbrokendarkhunter",
+"race": "zz",
+"level": "2",
+"isbldg": "0",
+"gold": "150",
+"lumber": "10"
+},
+"nubr": {
+"name": "unbrokenrager",
+"race": "zz",
+"level": "4",
+"isbldg": "0",
+"gold": "255",
+"lumber": "30"
+},
+"nubw": {
+"name": "unbrokendarkweaver",
+"race": "zz",
+"level": "5",
+"isbldg": "0",
+"gold": "255",
+"lumber": "30"
+},
+"nvde": {
+"name": "eldervoidwalker",
+"race": "zz",
+"level": "9",
+"isbldg": "0",
+"gold": "545",
+"lumber": "150"
+},
+"nvdg": {
+"name": "greatervoidwalker",
+"race": "zz",
+"level": "6",
+"isbldg": "0",
+"gold": "300",
+"lumber": "45"
+},
+"nvdl": {
+"name": "lesservoidwalker",
+"race": "zz",
+"level": "1",
+"isbldg": "0",
+"gold": "105",
+"lumber": "0"
+},
+"nvdw": {
+"name": "voidwalker",
+"race": "zz",
+"level": "3",
+"isbldg": "0",
+"gold": "155",
+"lumber": "15"
+},
+"nwen": {
+"name": "wendigo1",
+"race": "zz",
+"level": "4",
+"isbldg": "0",
+"gold": "255",
+"lumber": "30"
+},
+"nwgs": {
+"name": "nagacoutl",
+"race": "zzn",
+"level": "2",
+"isbldg": "0",
+"gold": "235",
+"lumber": "30"
+},
+"nwiz": {
+"name": "apprenticewizard",
+"race": "zz",
+"level": "1",
+"isbldg": "0",
+"gold": "105",
+"lumber": "0"
+},
+"nwld": {
+"name": "direwolf",
+"race": "zz",
+"level": "6",
+"isbldg": "0",
+"gold": "365",
+"lumber": "80"
+},
+"nwlg": {
+"name": "giantwolf",
+"race": "zz",
+"level": "4",
+"isbldg": "0",
+"gold": "255",
+"lumber": "30"
+},
+"nwlt": {
+"name": "timberwolf",
+"race": "zz",
+"level": "2",
+"isbldg": "0",
+"gold": "150",
+"lumber": "10"
+},
+"nwna": {
+"name": "ancientwendigo",
+"race": "zz",
+"level": "9",
+"isbldg": "0",
+"gold": "545",
+"lumber": "150"
+},
+"nwnr": {
+"name": "elderwendigo",
+"race": "zz",
+"level": "6",
+"isbldg": "0",
+"gold": "365",
+"lumber": "80"
+},
+"nwns": {
+"name": "wendigoshaman",
+"race": "zz",
+"level": "7",
+"isbldg": "0",
+"gold": "425",
+"lumber": "100"
+},
+"nwrg": {
+"name": "wargolem",
+"race": "zz",
+"level": "6",
+"isbldg": "0",
+"gold": "365",
+"lumber": "80"
+},
+"nws1": {
+"name": "windserpent",
+"race": "zz",
+"level": "5",
+"isbldg": "0",
+"gold": "350",
+"lumber": "70"
+},
+"nwwd": {
+"name": "whitedirewolf",
+"race": "zz",
+"level": "6",
+"isbldg": "0",
+"gold": "365",
+"lumber": "80"
+},
+"nwwf": {
+"name": "whitewolf",
+"race": "zz",
+"level": "2",
+"isbldg": "0",
+"gold": "150",
+"lumber": "10"
+},
+"nwwg": {
+"name": "giantwhitewolf",
+"race": "zz",
+"level": "4",
+"isbldg": "0",
+"gold": "255",
+"lumber": "30"
+},
+"nwzd": {
+"name": "darkwizard",
+"race": "zz",
+"level": "8",
+"isbldg": "0",
+"gold": "480",
+"lumber": "120"
+},
+"nwzg": {
+"name": "renegadewizard",
+"race": "zz",
+"level": "5",
+"isbldg": "0",
+"gold": "320",
+"lumber": "50"
+},
+"nwzr": {
+"name": "roguewizard",
+"race": "zz",
+"level": "3",
+"isbldg": "0",
+"gold": "215",
+"lumber": "20"
+},
+"nzep": {
+"name": "goblinzeppelin",
+"race": "zz",
+"level": "1",
+"isbldg": "0",
+"gold": "240",
+"lumber": "60"
+},
+"nzom": {
+"name": "zombie",
+"race": "zz",
+"level": "1",
+"isbldg": "0",
+"gold": "85",
+"lumber": "0"
+},
+"nalb": {
+"name": "albatross",
+"race": "zz",
+"level": "-",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"ncrb": {
+"name": "crab",
+"race": "zz",
+"level": "-",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"nder": {
+"name": "deer",
+"race": "zz",
+"level": "-",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"ndog": {
+"name": "dog",
+"race": "zz",
+"level": "-",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"ndwm": {
+"name": "duneworm",
+"race": "zz",
+"level": "-",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"nech": {
+"name": "chicken",
+"race": "zz",
+"level": "-",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"necr": {
+"name": "rabbit",
+"race": "zz",
+"level": "-",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"nfbr": {
+"name": "felboar",
+"race": "zz",
+"level": "-",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"nfro": {
+"name": "frog",
+"race": "zz",
+"level": "-",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"nhmc": {
+"name": "hermitcrab",
+"race": "zz",
+"level": "-",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"now2": {
+"name": "owl2",
+"race": "zz",
+"level": "-",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"now3": {
+"name": "owl3",
+"race": "zz",
+"level": "-",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"nowl": {
+"name": "owl",
+"race": "zz",
+"level": "-",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"npig": {
+"name": "pig",
+"race": "zz",
+"level": "-",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"npng": {
+"name": "penguin",
+"race": "zz",
+"level": "-",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"npnw": {
+"name": "waterpenguin",
+"race": "zz",
+"level": "-",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"nrac": {
+"name": "raccoon",
+"race": "zz",
+"level": "-",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"nrat": {
+"name": "rat",
+"race": "zz",
+"level": "-",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"nsea": {
+"name": "seal",
+"race": "zz",
+"level": "-",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"nsha": {
+"name": "amphibioussheep",
+"race": "zz",
+"level": "-",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"nshe": {
+"name": "sheep",
+"race": "zz",
+"level": "-",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"nshf": {
+"name": "flyingsheep",
+"race": "zz",
+"level": "-",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"nshw": {
+"name": "watersheep",
+"race": "zz",
+"level": "-",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"nskk": {
+"name": "skink",
+"race": "zz",
+"level": "-",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"nsno": {
+"name": "snowyowl",
+"race": "zz",
+"level": "-",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"nvil": {
+"name": "villagerman",
+"race": "zz",
+"level": "-",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"nvk2": {
+"name": "villagerkid2",
+"race": "zz",
+"level": "-",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"nvl2": {
+"name": "villagerman2",
+"race": "zz",
+"level": "-",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"nvlk": {
+"name": "villagerkid",
+"race": "zz",
+"level": "-",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"nvlw": {
+"name": "villagerwoman",
+"race": "zz",
+"level": "-",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"nvul": {
+"name": "vulture",
+"race": "zz",
+"level": "-",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"ncb0": {
+"name": "citybuildingSmall 0",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "0",
+"lumber": "0"
+},
+"ncb1": {
+"name": "citybuildingSmall 1",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "0",
+"lumber": "0"
+},
+"ncb2": {
+"name": "citybuildingSmall 2",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "0",
+"lumber": "0"
+},
+"ncb3": {
+"name": "citybuildingSmall 3",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "0",
+"lumber": "0"
+},
+"ncb4": {
+"name": "citybuildingSmall 4",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "0",
+"lumber": "0"
+},
+"ncb5": {
+"name": "citybuildingSmall 5",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "0",
+"lumber": "0"
+},
+"ncb6": {
+"name": "citybuildingSmall 6",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "0",
+"lumber": "0"
+},
+"ncb7": {
+"name": "citybuildingSmall 7",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "0",
+"lumber": "0"
+},
+"ncb8": {
+"name": "citybuildingSmall 8",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "0",
+"lumber": "0"
+},
+"ncb9": {
+"name": "citybuildingSmall 9",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "0",
+"lumber": "0"
+},
+"ncba": {
+"name": "citybuildingSmall a",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "0",
+"lumber": "0"
+},
+"ncbb": {
+"name": "citybuildingSmall b",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "0",
+"lumber": "0"
+},
+"ncbc": {
+"name": "CityBuildingLarge 0",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "0",
+"lumber": "0"
+},
+"ncbd": {
+"name": "CityBuildingLarge 1",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "0",
+"lumber": "0"
+},
+"ncbe": {
+"name": "CityBuildingLarge 2",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "0",
+"lumber": "0"
+},
+"ncbf": {
+"name": "CityBuildingLarge 3",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "0",
+"lumber": "0"
+},
+"ncnt": {
+"name": "centaurtent",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "0",
+"lumber": "0"
+},
+"ncop": {
+"name": "circleofpower",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "0",
+"lumber": "0"
+},
+"ncp2": {
+"name": "circleofpowermedium",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "0",
+"lumber": "0"
+},
+"ncp3": {
+"name": "circleofpowerlarge",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "0",
+"lumber": "0"
+},
+"nct1": {
+"name": "centaurtent1",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "0",
+"lumber": "0"
+},
+"nct2": {
+"name": "centaurtent2",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "0",
+"lumber": "0"
+},
+"ndch": {
+"name": "chieftainhut",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "0",
+"lumber": "0"
+},
+"ndh0": {
+"name": "draneihut0",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "0",
+"lumber": "0"
+},
+"ndh1": {
+"name": "draneihut1",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "0",
+"lumber": "0"
+},
+"ndh2": {
+"name": "draeneihaven",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "400",
+"lumber": "195"
+},
+"ndh3": {
+"name": "draeneiwarriorshall",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "170",
+"lumber": "55"
+},
+"ndh4": {
+"name": "draeneiseerden",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "100",
+"lumber": "140"
+},
+"ndrg": {
+"name": "greendragonroost",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "50",
+"lumber": "0"
+},
+"ndrk": {
+"name": "blackdragonroost",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "50",
+"lumber": "0"
+},
+"ndro": {
+"name": "outlanddragonroost",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "50",
+"lumber": "0"
+},
+"ndrr": {
+"name": "reddragonroost",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "50",
+"lumber": "0"
+},
+"ndru": {
+"name": "bluedragonroost",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "50",
+"lumber": "0"
+},
+"ndrz": {
+"name": "bronzedragonroost",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "50",
+"lumber": "0"
+},
+"nfh0": {
+"name": "foresttrollhut0",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "0",
+"lumber": "0"
+},
+"nfh1": {
+"name": "foresttrollhut1",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "0",
+"lumber": "0"
+},
+"nfoh": {
+"name": "fountainofhealth",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "50",
+"lumber": "0"
+},
+"nfr1": {
+"name": "furbolghut1",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "0",
+"lumber": "0"
+},
+"nfr2": {
+"name": "furbolghut2",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "0",
+"lumber": "0"
+},
+"ngad": {
+"name": "goblinammodump",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "50",
+"lumber": "0"
+},
+"ngme": {
+"name": "goblinmerchant",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "50",
+"lumber": "0"
+},
+"ngnh": {
+"name": "gnollhut",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "0",
+"lumber": "0"
+},
+"ngni": {
+"name": "granaryinfected",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "0",
+"lumber": "0"
+},
+"ngol": {
+"name": "goldmine",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "0",
+"lumber": "0"
+},
+"ngt2": {
+"name": "gnollhut2",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "0",
+"lumber": "0"
+},
+"ngwr": {
+"name": "grainwarehouse",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "0",
+"lumber": "0"
+},
+"nhns": {
+"name": "harpynest",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "0",
+"lumber": "0"
+},
+"nmer": {
+"name": "mercenarycampl",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "50",
+"lumber": "0"
+},
+"nmg0": {
+"name": "murgulhut0",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "0",
+"lumber": "0"
+},
+"nmg1": {
+"name": "murgulhut1",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "0",
+"lumber": "0"
+},
+"nmh0": {
+"name": "murlochut0",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "0",
+"lumber": "0"
+},
+"nmh1": {
+"name": "murlochut1",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "0",
+"lumber": "0"
+},
+"nmoo": {
+"name": "fountainofmana",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "50",
+"lumber": "0"
+},
+"nmr0": {
+"name": "mercenarycampv",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "50",
+"lumber": "0"
+},
+"nmr2": {
+"name": "mercenarycampf",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "50",
+"lumber": "0"
+},
+"nmr3": {
+"name": "mercenarycampw",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "50",
+"lumber": "0"
+},
+"nmr4": {
+"name": "mercenarycampb",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "50",
+"lumber": "0"
+},
+"nmr5": {
+"name": "mercenarycampa",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "50",
+"lumber": "0"
+},
+"nmr6": {
+"name": "mercenarycampc",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "50",
+"lumber": "0"
+},
+"nmr7": {
+"name": "mercenarycampn",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "50",
+"lumber": "0"
+},
+"nmr8": {
+"name": "mercenarycampy",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "50",
+"lumber": "0"
+},
+"nmr9": {
+"name": "mercenarycampx",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "50",
+"lumber": "0"
+},
+"nmra": {
+"name": "mercenarycampd",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "50",
+"lumber": "0"
+},
+"nmrb": {
+"name": "mercenarycampg",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "50",
+"lumber": "0"
+},
+"nmrc": {
+"name": "mercenarycampz",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "50",
+"lumber": "0"
+},
+"nmrd": {
+"name": "mercenarycampi",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "50",
+"lumber": "0"
+},
+"nmre": {
+"name": "mercenarycampo",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "50",
+"lumber": "0"
+},
+"nmrf": {
+"name": "mercenarycampk",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "50",
+"lumber": "0"
+},
+"nmrk": {
+"name": "marketplace",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "50",
+"lumber": "0"
+},
+"nnzg": {
+"name": "nerubianziggurat",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "0",
+"lumber": "0"
+},
+"nshp": {
+"name": "goblinshipyard",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "50",
+"lumber": "0"
+},
+"ntav": {
+"name": "cantina",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "50",
+"lumber": "0"
+},
+"nten": {
+"name": "tent",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "0",
+"lumber": "0"
+},
+"nth0": {
+"name": "icetrollhut0",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "0",
+"lumber": "0"
+},
+"nth1": {
+"name": "icetrollhut1",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "0",
+"lumber": "0"
+},
+"ntn2": {
+"name": "tent2",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "0",
+"lumber": "0"
+},
+"ntnt": {
+"name": "taurentent",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "0",
+"lumber": "0"
+},
+"ntt2": {
+"name": "taurentent2",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "0",
+"lumber": "0"
+},
+"nwgt": {
+"name": "waygate",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "50",
+"lumber": "0"
+},
+"Ecen": {
+"name": "cenarius",
+"race": "vher",
+"level": "5",
+"isbldg": "0",
+"gold": "425",
+"lumber": "100"
+},
+"Eevi": {
+"name": "evilillidan",
+"race": "vher",
+"level": "5",
+"isbldg": "0",
+"gold": "425",
+"lumber": "100"
+},
+"Eevm": {
+"name": "evilillidandemonform",
+"race": "vher",
+"level": "5",
+"isbldg": "0",
+"gold": "425",
+"lumber": "100"
+},
+"Efur": {
+"name": "furion",
+"race": "vher",
+"level": "5",
+"isbldg": "0",
+"gold": "425",
+"lumber": "0"
+},
+"Eidm": {
+"name": "illidandemonform",
+"race": "vher",
+"level": "5",
+"isbldg": "0",
+"gold": "425",
+"lumber": "100"
+},
+"Eill": {
+"name": "illidan",
+"race": "vher",
+"level": "5",
+"isbldg": "0",
+"gold": "425",
+"lumber": "100"
+},
+"Eilm": {
+"name": "illidanmorphed",
+"race": "vher",
+"level": "5",
+"isbldg": "0",
+"gold": "425",
+"lumber": "100"
+},
+"Ekgg": {
+"name": "keeperofthegroveghost",
+"race": "vher",
+"level": "5",
+"isbldg": "0",
+"gold": "425",
+"lumber": "100"
+},
+"Emfr": {
+"name": "malfurion",
+"race": "vher",
+"level": "5",
+"isbldg": "0",
+"gold": "425",
+"lumber": "0"
+},
+"Emns": {
+"name": "malfurionnostag",
+"race": "vher",
+"level": "5",
+"isbldg": "0",
+"gold": "425",
+"lumber": "100"
+},
+"Etyr": {
+"name": "tyrande",
+"race": "vher",
+"level": "5",
+"isbldg": "0",
+"gold": "425",
+"lumber": "100"
+},
+"Ewrd": {
+"name": "maiev",
+"race": "vher",
+"level": "5",
+"isbldg": "0",
+"gold": "425",
+"lumber": "100"
+},
+"Hant": {
+"name": "antonidus",
+"race": "vher",
+"level": "5",
+"isbldg": "0",
+"gold": "425",
+"lumber": "100"
+},
+"Hapm": {
+"name": "admiralproudmoore",
+"race": "vher",
+"level": "5",
+"isbldg": "0",
+"gold": "425",
+"lumber": "100"
+},
+"Harf": {
+"name": "arthaswithfrostmourne",
+"race": "vher",
+"level": "5",
+"isbldg": "0",
+"gold": "425",
+"lumber": "100"
+},
+"Hart": {
+"name": "arthas",
+"race": "vher",
+"level": "5",
+"isbldg": "0",
+"gold": "425",
+"lumber": "100"
+},
+"Hdgo": {
+"name": "dagren",
+"race": "vher",
+"level": "5",
+"isbldg": "0",
+"gold": "425",
+"lumber": "100"
+},
+"Hgam": {
+"name": "ghostlyarchmage",
+"race": "vher",
+"level": "5",
+"isbldg": "0",
+"gold": "425",
+"lumber": "100"
+},
+"Hhkl": {
+"name": "halahk",
+"race": "vher",
+"level": "5",
+"isbldg": "0",
+"gold": "425",
+"lumber": "100"
+},
+"Hjai": {
+"name": "jaina",
+"race": "vher",
+"level": "5",
+"isbldg": "0",
+"gold": "425",
+"lumber": "100"
+},
+"Hkal": {
+"name": "kael",
+"race": "vher",
+"level": "5",
+"isbldg": "0",
+"gold": "425",
+"lumber": "100"
+},
+"Hlgr": {
+"name": "lordgarithos",
+"race": "vher",
+"level": "5",
+"isbldg": "0",
+"gold": "425",
+"lumber": "100"
+},
+"Hmbr": {
+"name": "muradinbronzebeard",
+"race": "vher",
+"level": "5",
+"isbldg": "0",
+"gold": "425",
+"lumber": "100"
+},
+"Hmgd": {
+"name": "margoth",
+"race": "vher",
+"level": "5",
+"isbldg": "0",
+"gold": "425",
+"lumber": "100"
+},
+"Hpb1": {
+"name": "paladinboss1",
+"race": "vher",
+"level": "5",
+"isbldg": "0",
+"gold": "425",
+"lumber": "100"
+},
+"Hpb2": {
+"name": "paladinboss2",
+"race": "vher",
+"level": "5",
+"isbldg": "0",
+"gold": "425",
+"lumber": "100"
+},
+"Huth": {
+"name": "uther",
+"race": "vher",
+"level": "5",
+"isbldg": "0",
+"gold": "425",
+"lumber": "100"
+},
+"Hvsh": {
+"name": "ladyvashj",
+"race": "vher",
+"level": "5",
+"isbldg": "0",
+"gold": "425",
+"lumber": "100"
+},
+"Hvwd": {
+"name": "sylvanuswindrunner",
+"race": "vher",
+"level": "5",
+"isbldg": "0",
+"gold": "425",
+"lumber": "100"
+},
+"Naka": {
+"name": "akama",
+"race": "vher",
+"level": "5",
+"isbldg": "0",
+"gold": "425",
+"lumber": "100"
+},
+"Nbbc": {
+"name": "blackrockblademaster",
+"race": "vher",
+"level": "5",
+"isbldg": "0",
+"gold": "425",
+"lumber": "100"
+},
+"Nkjx": {
+"name": "kiljaedencinematic",
+"race": "vher",
+"level": "5",
+"isbldg": "0",
+"gold": "425",
+"lumber": "100"
+},
+"Nklj": {
+"name": "kiljaeden",
+"race": "vher",
+"level": "5",
+"isbldg": "0",
+"gold": "425",
+"lumber": "100"
+},
+"Nmag": {
+"name": "magtheridon",
+"race": "vher",
+"level": "5",
+"isbldg": "0",
+"gold": "425",
+"lumber": "100"
+},
+"Nman": {
+"name": "mannoroth",
+"race": "zz",
+"level": "5",
+"isbldg": "0",
+"gold": "425",
+"lumber": "100"
+},
+"Npld": {
+"name": "oldpitlord",
+"race": "vher",
+"level": "5",
+"isbldg": "0",
+"gold": "425",
+"lumber": "100"
+},
+"Nsjs": {
+"name": "sinjostormstout",
+"race": "vher",
+"level": "5",
+"isbldg": "0",
+"gold": "425",
+"lumber": "100"
+},
+"Ocb2": {
+"name": "cairnebloodhoofexp",
+"race": "vher",
+"level": "5",
+"isbldg": "0",
+"gold": "425",
+"lumber": "100"
+},
+"Ocbh": {
+"name": "cairnebloodhoof",
+"race": "vher",
+"level": "5",
+"isbldg": "0",
+"gold": "425",
+"lumber": "100"
+},
+"Odrt": {
+"name": "drekthar",
+"race": "vher",
+"level": "5",
+"isbldg": "0",
+"gold": "425",
+"lumber": "100"
+},
+"Ogld": {
+"name": "guldan",
+"race": "vher",
+"level": "5",
+"isbldg": "0",
+"gold": "425",
+"lumber": "100"
+},
+"Ogrh": {
+"name": "gromhellscream",
+"race": "vher",
+"level": "5",
+"isbldg": "0",
+"gold": "425",
+"lumber": "100"
+},
+"Opgh": {
+"name": "possessedgromhellscream",
+"race": "vher",
+"level": "5",
+"isbldg": "0",
+"gold": "425",
+"lumber": "100"
+},
+"Orex": {
+"name": "rexxar",
+"race": "vher",
+"level": "5",
+"isbldg": "0",
+"gold": "425",
+"lumber": "100"
+},
+"Orkn": {
+"name": "rokhan",
+"race": "vher",
+"level": "5",
+"isbldg": "0",
+"gold": "425",
+"lumber": "100"
+},
+"Osam": {
+"name": "samuro",
+"race": "vher",
+"level": "5",
+"isbldg": "0",
+"gold": "425",
+"lumber": "100"
+},
+"Otcc": {
+"name": "cairnebloodhoofcinematic",
+"race": "vher",
+"level": "5",
+"isbldg": "0",
+"gold": "425",
+"lumber": "100"
+},
+"Othr": {
+"name": "thrall",
+"race": "vher",
+"level": "5",
+"isbldg": "0",
+"gold": "425",
+"lumber": "100"
+},
+"Uanb": {
+"name": "anubarak",
+"race": "vher",
+"level": "5",
+"isbldg": "0",
+"gold": "425",
+"lumber": "100"
+},
+"Ubal": {
+"name": "balnazzar",
+"race": "vher",
+"level": "5",
+"isbldg": "0",
+"gold": "425",
+"lumber": "100"
+},
+"Uclc": {
+"name": "kelthuzadlichcinematic",
+"race": "vher",
+"level": "5",
+"isbldg": "0",
+"gold": "425",
+"lumber": "100"
+},
+"Udth": {
+"name": "detheroc",
+"race": "vher",
+"level": "5",
+"isbldg": "0",
+"gold": "425",
+"lumber": "100"
+},
+"Uear": {
+"name": "evilarthas",
+"race": "vher",
+"level": "5",
+"isbldg": "0",
+"gold": "425",
+"lumber": "100"
+},
+"Uktl": {
+"name": "kelthuzadlich",
+"race": "vher",
+"level": "5",
+"isbldg": "0",
+"gold": "425",
+"lumber": "100"
+},
+"Umal": {
+"name": "malganis",
+"race": "vher",
+"level": "5",
+"isbldg": "0",
+"gold": "425",
+"lumber": "100"
+},
+"Usyl": {
+"name": "evilsylvanas",
+"race": "vher",
+"level": "5",
+"isbldg": "0",
+"gold": "425",
+"lumber": "100"
+},
+"Utic": {
+"name": "tichondrius",
+"race": "vher",
+"level": "5",
+"isbldg": "0",
+"gold": "425",
+"lumber": "100"
+},
+"Uvar": {
+"name": "varimathras",
+"race": "vher",
+"level": "5",
+"isbldg": "0",
+"gold": "425",
+"lumber": "100"
+},
+"Uvng": {
+"name": "vengyr",
+"race": "vher",
+"level": "5",
+"isbldg": "0",
+"gold": "425",
+"lumber": "100"
+},
+"Uwar": {
+"name": "archimonde",
+"race": "vher",
+"level": "5",
+"isbldg": "0",
+"gold": "425",
+"lumber": "100"
+},
+"eilw": {
+"name": "illidanwagon",
+"race": "zz",
+"level": "1",
+"isbldg": "0",
+"gold": "195",
+"lumber": "35"
+},
+"enec": {
+"name": "nightelfrunner",
+"race": "zz",
+"level": "-",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"ensh": {
+"name": "naisha",
+"race": "zz",
+"level": "3",
+"isbldg": "0",
+"gold": "195",
+"lumber": "20"
+},
+"eshd": {
+"name": "shandris",
+"race": "zz",
+"level": "4",
+"isbldg": "0",
+"gold": "215",
+"lumber": "20"
+},
+"etrs": {
+"name": "nightelftransportship",
+"race": "zz",
+"level": "2",
+"isbldg": "0",
+"gold": "170",
+"lumber": "50"
+},
+"hbew": {
+"name": "bloodelfwagon",
+"race": "zz",
+"level": "1",
+"isbldg": "0",
+"gold": "195",
+"lumber": "35"
+},
+"hcth": {
+"name": "thecaptain",
+"race": "zz",
+"level": "6",
+"isbldg": "0",
+"gold": "130",
+"lumber": "0"
+},
+"hhdl": {
+"name": "riderlesshorse",
+"race": "zz",
+"level": "1",
+"isbldg": "0",
+"gold": "240",
+"lumber": "40"
+},
+"hhes": {
+"name": "highelvenswordsman",
+"race": "zz",
+"level": "2",
+"isbldg": "0",
+"gold": "135",
+"lumber": "0"
+},
+"hprt": {
+"name": "shimmeringportal",
+"race": "zz",
+"level": "-",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"hrdh": {
+"name": "packhorse",
+"race": "zz",
+"level": "1",
+"isbldg": "0",
+"gold": "240",
+"lumber": "40"
+},
+"nbee": {
+"name": "bloodelfengineer",
+"race": "zz",
+"level": "1",
+"isbldg": "0",
+"gold": "75",
+"lumber": "0"
+},
+"nbel": {
+"name": "bloodelflieutenant",
+"race": "zz",
+"level": "2",
+"isbldg": "0",
+"gold": "155",
+"lumber": "20"
+},
+"nbsp": {
+"name": "battleship",
+"race": "zz",
+"level": "1",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"nchg": {
+"name": "chaosgrunt",
+"race": "zz",
+"level": "4",
+"isbldg": "0",
+"gold": "200",
+"lumber": "0"
+},
+"nchr": {
+"name": "chaoswolfrider",
+"race": "zz",
+"level": "5",
+"isbldg": "0",
+"gold": "180",
+"lumber": "40"
+},
+"nchw": {
+"name": "chaoswarlock",
+"race": "zz",
+"level": "2",
+"isbldg": "0",
+"gold": "220",
+"lumber": "0"
+},
+"nckb": {
+"name": "chaoskotobeast",
+"race": "zz",
+"level": "4",
+"isbldg": "0",
+"gold": "255",
+"lumber": "60"
+},
+"ncpn": {
+"name": "chaospeon",
+"race": "zz",
+"level": "1",
+"isbldg": "0",
+"gold": "70",
+"lumber": "0"
+},
+"ndmu": {
+"name": "dalaranmutant",
+"race": "zz",
+"level": "2",
+"isbldg": "0",
+"gold": "120",
+"lumber": "0"
+},
+"ndrd": {
+"name": "draeneidarkslayer",
+"race": "zz",
+"level": "5",
+"isbldg": "0",
+"gold": "260",
+"lumber": "40"
+},
+"ndrf": {
+"name": "draeneiguardian",
+"race": "zz",
+"level": "1",
+"isbldg": "0",
+"gold": "85",
+"lumber": "0"
+},
+"ndrh": {
+"name": "draeneiharbinger",
+"race": "zz",
+"level": "4",
+"isbldg": "0",
+"gold": "165",
+"lumber": "20"
+},
+"ndrj": {
+"name": "dalaranreject",
+"race": "zz",
+"level": "1",
+"isbldg": "0",
+"gold": "85",
+"lumber": "0"
+},
+"ndrl": {
+"name": "draeneilaborer",
+"race": "zz",
+"level": "1",
+"isbldg": "0",
+"gold": "75",
+"lumber": "0"
+},
+"ndrm": {
+"name": "draeneidisciple",
+"race": "zz",
+"level": "2",
+"isbldg": "0",
+"gold": "155",
+"lumber": "15"
+},
+"ndrn": {
+"name": "draeneivindicator",
+"race": "zz",
+"level": "5",
+"isbldg": "0",
+"gold": "225",
+"lumber": "15"
+},
+"ndrp": {
+"name": "draeneiprotector",
+"race": "zz",
+"level": "2",
+"isbldg": "0",
+"gold": "135",
+"lumber": "0"
+},
+"ndrs": {
+"name": "draeneiseer",
+"race": "zz",
+"level": "6",
+"isbldg": "0",
+"gold": "210",
+"lumber": "30"
+},
+"ndrt": {
+"name": "draeneistalker",
+"race": "zz",
+"level": "5",
+"isbldg": "0",
+"gold": "270",
+"lumber": "30"
+},
+"ndrw": {
+"name": "draeneiwatcher",
+"race": "zz",
+"level": "3",
+"isbldg": "0",
+"gold": "135",
+"lumber": "0"
+},
+"ndsa": {
+"name": "draeneisalamander",
+"race": "zz",
+"level": "3",
+"isbldg": "0",
+"gold": "215",
+"lumber": "40"
+},
+"negz": {
+"name": "engineergazlowe",
+"race": "zz",
+"level": "4",
+"isbldg": "0",
+"gold": "215",
+"lumber": "100"
+},
+"nemi": {
+"name": "emissary",
+"race": "zz",
+"level": "2",
+"isbldg": "0",
+"gold": "205",
+"lumber": "0"
+},
+"nfgl": {
+"name": "fleshgolem",
+"race": "zz",
+"level": "11",
+"isbldg": "0",
+"gold": "500",
+"lumber": "150"
+},
+"ngbl": {
+"name": "goblinblaster",
+"race": "zz",
+"level": "6",
+"isbldg": "0",
+"gold": "375",
+"lumber": "100"
+},
+"nhea": {
+"name": "highelvenarcher",
+"race": "zz",
+"level": "2",
+"isbldg": "0",
+"gold": "130",
+"lumber": "10"
+},
+"nhef": {
+"name": "highelvenfemale",
+"race": "zz",
+"level": "-",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"nhem": {
+"name": "highelvenmale",
+"race": "zz",
+"level": "-",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"nhew": {
+"name": "bloodelfworker",
+"race": "zz",
+"level": "1",
+"isbldg": "0",
+"gold": "75",
+"lumber": "0"
+},
+"njks": {
+"name": "jailorkassan",
+"race": "zz",
+"level": "1",
+"isbldg": "0",
+"gold": "85",
+"lumber": "0"
+},
+"nmdm": {
+"name": "medivhmorphed",
+"race": "zz",
+"level": "2",
+"isbldg": "0",
+"gold": "185",
+"lumber": "0"
+},
+"nmed": {
+"name": "medivh",
+"race": "zz",
+"level": "2",
+"isbldg": "0",
+"gold": "185",
+"lumber": "0"
+},
+"nmpe": {
+"name": "murgulslave",
+"race": "zzn",
+"level": "1",
+"isbldg": "0",
+"gold": "75",
+"lumber": "0"
+},
+"nmsh": {
+"name": "misha",
+"race": "zz",
+"level": "4",
+"isbldg": "0",
+"gold": "155",
+"lumber": "0"
+},
+"nser": {
+"name": "searinox",
+"race": "zz",
+"level": "8",
+"isbldg": "0",
+"gold": "510",
+"lumber": "120"
+},
+"nspc": {
+"name": "supportcolumn",
+"race": "zz",
+"level": "-",
+"isbldg": "0",
+"gold": "50",
+"lumber": "0"
+},
+"nssn": {
+"name": "nightelfassassin",
+"race": "zz",
+"level": "3",
+"isbldg": "0",
+"gold": "195",
+"lumber": "20"
+},
+"nthr": {
+"name": "tharifas",
+"race": "zz",
+"level": "8",
+"isbldg": "0",
+"gold": "510",
+"lumber": "150"
+},
+"nw2w": {
+"name": "war2warlock",
+"race": "zz",
+"level": "2",
+"isbldg": "0",
+"gold": "215",
+"lumber": "0"
+},
+"nwat": {
+"name": "watcher",
+"race": "zz",
+"level": "2",
+"isbldg": "0",
+"gold": "140",
+"lumber": "0"
+},
+"nzlc": {
+"name": "lichking",
+"race": "zz",
+"level": "-",
+"isbldg": "0",
+"gold": "0",
+"lumber": "0"
+},
+"odkt": {
+"name": "drakthul",
+"race": "zz",
+"level": "6",
+"isbldg": "0",
+"gold": "145",
+"lumber": "20"
+},
+"ogrk": {
+"name": "garthok",
+"race": "zz",
+"level": "3",
+"isbldg": "0",
+"gold": "200",
+"lumber": "0"
+},
+"ojgn": {
+"name": "juggernaut",
+"race": "zz",
+"level": "6",
+"isbldg": "0",
+"gold": "500",
+"lumber": "200"
+},
+"omtg": {
+"name": "mathog",
+"race": "zz",
+"level": "2",
+"isbldg": "0",
+"gold": "130",
+"lumber": "0"
+},
+"onzg": {
+"name": "nazgrel",
+"race": "zz",
+"level": "3",
+"isbldg": "0",
+"gold": "180",
+"lumber": "40"
+},
+"oosc": {
+"name": "kotobeastnorider",
+"race": "zz",
+"level": "1",
+"isbldg": "0",
+"gold": "195",
+"lumber": "35"
+},
+"oswy": {
+"name": "spiritwyvern",
+"race": "zz",
+"level": "5",
+"isbldg": "0",
+"gold": "130",
+"lumber": "0"
+},
+"ovlj": {
+"name": "voljin",
+"race": "zz",
+"level": "2",
+"isbldg": "0",
+"gold": "145",
+"lumber": "25"
+},
+"owar": {
+"name": "chaoswarlord",
+"race": "zz",
+"level": "2",
+"isbldg": "0",
+"gold": "130",
+"lumber": "0"
+},
+"ownr": {
+"name": "riderlesswyvern",
+"race": "zz",
+"level": "5",
+"isbldg": "0",
+"gold": "130",
+"lumber": "0"
+},
+"uabc": {
+"name": "abominationcinematic",
+"race": "zz",
+"level": "4",
+"isbldg": "0",
+"gold": "240",
+"lumber": "70"
+},
+"uarb": {
+"name": "airbarge",
+"race": "zz",
+"level": "1",
+"isbldg": "0",
+"gold": "240",
+"lumber": "60"
+},
+"ubdd": {
+"name": "azurelordfrostwyrm",
+"race": "zz",
+"level": "6",
+"isbldg": "0",
+"gold": "385",
+"lumber": "120"
+},
+"ubdr": {
+"name": "azureloredragon",
+"race": "zz",
+"level": "10",
+"isbldg": "0",
+"gold": "595",
+"lumber": "200"
+},
+"ubot": {
+"name": "undeadtransportship",
+"race": "zz",
+"level": "2",
+"isbldg": "0",
+"gold": "170",
+"lumber": "50"
+},
+"udes": {
+"name": "undeaddestroyer",
+"race": "zz",
+"level": "4",
+"isbldg": "0",
+"gold": "250",
+"lumber": "100"
+},
+"uktg": {
+"name": "kelthuzadghost",
+"race": "zz",
+"level": "2",
+"isbldg": "0",
+"gold": "195",
+"lumber": "0"
+},
+"uktn": {
+"name": "kelthuzadnecro",
+"race": "zz",
+"level": "2",
+"isbldg": "0",
+"gold": "195",
+"lumber": "0"
+},
+"uswb": {
+"name": "sylvanusbanshee",
+"race": "zz",
+"level": "3",
+"isbldg": "0",
+"gold": "225",
+"lumber": "0"
+},
+"haro": {
+"name": "arcaneobservatory",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "240",
+"lumber": "100"
+},
+"nbfl": {
+"name": "bloodfountain",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "50",
+"lumber": "0"
+},
+"nbse": {
+"name": "bindstonese",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "50",
+"lumber": "0"
+},
+"nbsm": {
+"name": "bookofsummoning",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "50",
+"lumber": "0"
+},
+"nbsw": {
+"name": "bindstonesw",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "50",
+"lumber": "0"
+},
+"nbt1": {
+"name": "bouldertower",
+"race": "zz",
+"level": "1",
+"isbldg": "1",
+"gold": "120",
+"lumber": "60"
+},
+"nbt2": {
+"name": "bouldertowerupgrade",
+"race": "zz",
+"level": "1",
+"isbldg": "1",
+"gold": "120",
+"lumber": "60"
+},
+"nbwd": {
+"name": "barrowden",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "210",
+"lumber": "100"
+},
+"ncap": {
+"name": "corruptedancientprotector",
+"race": "zz",
+"level": "3",
+"isbldg": "1",
+"gold": "240",
+"lumber": "130"
+},
+"ncaw": {
+"name": "corruptedancientofwar",
+"race": "zz",
+"level": "1",
+"isbldg": "1",
+"gold": "255",
+"lumber": "70"
+},
+"ncmw": {
+"name": "corruptedmoonwell",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "155",
+"lumber": "40"
+},
+"ncta": {
+"name": "corruptedtreeofages",
+"race": "zz",
+"level": "1",
+"isbldg": "1",
+"gold": "270",
+"lumber": "80"
+},
+"ncte": {
+"name": "corruptedtreeofeternity",
+"race": "zz",
+"level": "1",
+"isbldg": "1",
+"gold": "995",
+"lumber": "200"
+},
+"nctl": {
+"name": "corruptedtreeoflife",
+"race": "zz",
+"level": "1",
+"isbldg": "1",
+"gold": "385",
+"lumber": "0"
+},
+"ndfl": {
+"name": "defiledfountainoflife",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "50",
+"lumber": "0"
+},
+"ndgt": {
+"name": "dalaranguardtower",
+"race": "zz",
+"level": "1",
+"isbldg": "1",
+"gold": "120",
+"lumber": "60"
+},
+"ndke": {
+"name": "darkportalse",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "50",
+"lumber": "0"
+},
+"ndkw": {
+"name": "darkportalsw",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "50",
+"lumber": "0"
+},
+"ndmg": {
+"name": "demongate",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "50",
+"lumber": "0"
+},
+"ndrb": {
+"name": "dragonbuilding",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "50",
+"lumber": "0"
+},
+"ndt1": {
+"name": "coldtower",
+"race": "zz",
+"level": "1",
+"isbldg": "1",
+"gold": "120",
+"lumber": "60"
+},
+"ndt2": {
+"name": "coldtowerupgrade",
+"race": "zz",
+"level": "1",
+"isbldg": "1",
+"gold": "120",
+"lumber": "60"
+},
+"nef0": {
+"name": "elvenfarm0",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "70",
+"lumber": "20"
+},
+"nef1": {
+"name": "elvenfarm1",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "70",
+"lumber": "20"
+},
+"nef2": {
+"name": "elvenfarm2",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "70",
+"lumber": "20"
+},
+"nef3": {
+"name": "elvenfarm3",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "70",
+"lumber": "20"
+},
+"nef4": {
+"name": "elvenfarm4",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "70",
+"lumber": "20"
+},
+"nef5": {
+"name": "elvenfarm5",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "70",
+"lumber": "20"
+},
+"nef6": {
+"name": "elvenfarm6",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "70",
+"lumber": "20"
+},
+"nef7": {
+"name": "elvenfarm7",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "70",
+"lumber": "20"
+},
+"nefm": {
+"name": "elvenfarm",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "70",
+"lumber": "20"
+},
+"negf": {
+"name": "earthfurytower",
+"race": "zz",
+"level": "1",
+"isbldg": "1",
+"gold": "120",
+"lumber": "60"
+},
+"negm": {
+"name": "skyfurytower",
+"race": "zz",
+"level": "1",
+"isbldg": "1",
+"gold": "120",
+"lumber": "60"
+},
+"negt": {
+"name": "elvenguardtower",
+"race": "zz",
+"level": "1",
+"isbldg": "1",
+"gold": "120",
+"lumber": "60"
+},
+"net1": {
+"name": "energytower",
+"race": "zz",
+"level": "1",
+"isbldg": "1",
+"gold": "120",
+"lumber": "60"
+},
+"net2": {
+"name": "energytowerupgrade",
+"race": "zz",
+"level": "1",
+"isbldg": "1",
+"gold": "120",
+"lumber": "60"
+},
+"nfnp": {
+"name": "purplefountain",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "50",
+"lumber": "0"
+},
+"nfrm": {
+"name": "frostmourne",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "50",
+"lumber": "0"
+},
+"nfrt": {
+"name": "fruitstand",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "50",
+"lumber": "0"
+},
+"nft1": {
+"name": "flametower",
+"race": "zz",
+"level": "1",
+"isbldg": "1",
+"gold": "120",
+"lumber": "60"
+},
+"nft2": {
+"name": "flametowerupgrade",
+"race": "zz",
+"level": "1",
+"isbldg": "1",
+"gold": "120",
+"lumber": "60"
+},
+"nfv0": {
+"name": "elvenfishingvillage0",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "50",
+"lumber": "0"
+},
+"nfv1": {
+"name": "elvenfishingvillage1",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "50",
+"lumber": "0"
+},
+"nfv2": {
+"name": "elvenfishingvillage2",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "50",
+"lumber": "0"
+},
+"nfv3": {
+"name": "elvenfishingvillage3",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "50",
+"lumber": "0"
+},
+"nfv4": {
+"name": "elvenfishingvillage4",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "50",
+"lumber": "0"
+},
+"ngob": {
+"name": "gemstoneobelisk",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "50",
+"lumber": "0"
+},
+"nhcn": {
+"name": "hornofcenarius",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "50",
+"lumber": "0"
+},
+"nheb": {
+"name": "highelfbarracks",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "255",
+"lumber": "80"
+},
+"nico": {
+"name": "icecrownobelisk",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "50",
+"lumber": "0"
+},
+"nitb": {
+"name": "treasurebox",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "50",
+"lumber": "0"
+},
+"nmgv": {
+"name": "magicvault",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "50",
+"lumber": "0"
+},
+"nnad": {
+"name": "altarofthedepths",
+"race": "zzm",
+"level": "-",
+"isbldg": "1",
+"gold": "255",
+"lumber": "100"
+},
+"nnfm": {
+"name": "coralbed",
+"race": "zzm",
+"level": "-",
+"isbldg": "1",
+"gold": "115",
+"lumber": "40"
+},
+"nnsa": {
+"name": "shrineofazshara",
+"race": "zzm",
+"level": "-",
+"isbldg": "1",
+"gold": "180",
+"lumber": "70"
+},
+"nnsg": {
+"name": "spawninggrounds",
+"race": "zzm",
+"level": "-",
+"isbldg": "1",
+"gold": "205",
+"lumber": "60"
+},
+"nntg": {
+"name": "tidalguardian",
+"race": "zzm",
+"level": "1",
+"isbldg": "1",
+"gold": "130",
+"lumber": "80"
+},
+"nntt": {
+"name": "templeoftides",
+"race": "zzm",
+"level": "-",
+"isbldg": "1",
+"gold": "385",
+"lumber": "150"
+},
+"npgf": {
+"name": "pigfarm",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "115",
+"lumber": "40"
+},
+"npgr": {
+"name": "powergenerator",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "50",
+"lumber": "0"
+},
+"nshr": {
+"name": "shrine",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "50",
+"lumber": "0"
+},
+"ntt1": {
+"name": "deathtower",
+"race": "zz",
+"level": "1",
+"isbldg": "1",
+"gold": "120",
+"lumber": "60"
+},
+"ntx2": {
+"name": "deathtowerupgrade",
+"race": "zz",
+"level": "1",
+"isbldg": "1",
+"gold": "120",
+"lumber": "60"
+},
+"nvr0": {
+"name": "ruinedelvenfishingvillage0",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "50",
+"lumber": "0"
+},
+"nvr1": {
+"name": "ruinedelvenfishingvillage1",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "50",
+"lumber": "0"
+},
+"nvr2": {
+"name": "ruinedelvenfishingvillage2",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "50",
+"lumber": "0"
+},
+"nwc1": {
+"name": "wyverncage1",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "50",
+"lumber": "0"
+},
+"nwc2": {
+"name": "wyverncage2",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "50",
+"lumber": "0"
+},
+"nzin": {
+"name": "zoneindicator",
+"race": "zz",
+"level": "-",
+"isbldg": "1",
+"gold": "50",
+"lumber": "0"
+},
+"ocbw": {
+"name": "chaosorcburrow",
+"race": "zz",
+"level": "1",
+"isbldg": "1",
+"gold": "160",
+"lumber": "70"
+},
+"zcso": {
+"name": "chaosspaceorc",
+"race": "zzz",
+"level": "6",
+"isbldg": "0",
+"gold": "215",
+"lumber": "10"
+},
+"zhyd": {
+"name": "hydralisk",
+"race": "zzz",
+"level": "7",
+"isbldg": "0",
+"gold": "280",
+"lumber": "30"
+},
+"zjug": {
+"name": "orcjuggernaut",
+"race": "zzz",
+"level": "6",
+"isbldg": "0",
+"gold": "205",
+"lumber": "30"
+},
+"zmar": {
+"name": "marine",
+"race": "zzz",
+"level": "6",
+"isbldg": "0",
+"gold": "215",
+"lumber": "0"
+},
+"zshv": {
+"name": "theshoveler",
+"race": "zzz",
+"level": "10",
+"isbldg": "0",
+"gold": "680",
+"lumber": "200"
+},
+"zsmc": {
+"name": "sammycube",
+"race": "zzz",
+"level": "6",
+"isbldg": "0",
+"gold": "425",
+"lumber": "150"
+},
+"zzrg": {
+"name": "zergling",
+"race": "zzz",
+"level": "3",
+"isbldg": "0",
+"gold": "85",
+"lumber": "0"
+}
+}

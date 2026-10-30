@@ -7,11 +7,27 @@
   python3 cli.py lookup <对手ID> --me <我的ID>        查某对手交手史
 """
 import argparse
+import os
 import sys
 
 from parser.replay import Replay
 from analyzer.game import analyze
 from store.opponents import OpponentDB
+
+
+def default_me():
+    """U盘便携模式: --me 省略时读 我的ID.txt (app 目录或其上一级)。"""
+    here = os.path.dirname(os.path.abspath(__file__))
+    for cand in (os.path.join(here, '我的ID.txt'),
+                 os.path.join(os.path.dirname(here), '我的ID.txt')):
+        if os.path.exists(cand):
+            try:
+                s = open(cand, encoding='utf-8-sig').read().strip()
+                if s:
+                    return s
+            except OSError:
+                pass
+    return None
 
 
 def fmt_t(sec):
@@ -60,15 +76,20 @@ def main():
     p1.add_argument('replay')
     p2 = sub.add_parser('record', help='录入对手库')
     p2.add_argument('replay')
-    p2.add_argument('--me', required=True, help='我的游戏 ID')
+    p2.add_argument('--me', default=None, help='我的游戏 ID (缺省读 U盘 我的ID.txt)')
     p2.add_argument('--won', choices=['win', 'loss'], default=None,
                     help='手动指定胜负 (缺省自动判定)')
     p3 = sub.add_parser('stats', help='跨局统计')
-    p3.add_argument('--me', required=True)
+    p3.add_argument('--me', default=None)
     p4 = sub.add_parser('lookup', help='查对手交手史')
     p4.add_argument('name')
-    p4.add_argument('--me', required=True)
+    p4.add_argument('--me', default=None)
     args = ap.parse_args()
+    if getattr(args, 'me', None) is None:
+        args.me = default_me()
+    if args.cmd in ('record', 'stats', 'lookup') and not args.me:
+        print('缺 我的ID: 命令加 --me <ID>, 或在工具目录放 我的ID.txt 文件')
+        sys.exit(1)
 
     if args.cmd == 'analyze':
         _analyze(args.replay)

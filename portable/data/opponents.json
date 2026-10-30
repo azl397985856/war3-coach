@@ -1,0 +1,62 @@
+{
+ "games": [
+  {
+   "file": "lastreplay.w3g",
+   "map": "w3arena__maelstrom__v2.w3x",
+   "date": "2026-10-30 10:21",
+   "ts": 1793326896,
+   "length_s": 194,
+   "players": [
+    {
+     "pid": 2,
+     "name": "Numedynumnum",
+     "race": "undead",
+     "result": null,
+     "apm": 854,
+     "tech": {},
+     "heroes": [
+      "死亡骑士"
+     ],
+     "bo_summary": "0:13 坟场 -> 0:21 地穴 -> 0:44 黑暗祭坛 -> 0:59 通灵塔 -> 1:34 遗物之墓 -> 1:49 死亡骑士 -> 2:04 通灵塔"
+    },
+    {
+     "pid": 3,
+     "name": "FarFromAnyRoad",
+     "race": "undead",
+     "result": null,
+     "apm": 165,
+     "tech": {},
+     "heroes": [
+      "地精修补匠"
+     ],
+     "bo_summary": "0:24 地穴 -> 0:28 通灵塔 -> 1:09 黑暗祭坛 -> 1:13 坟场 -> 2:08 通灵塔 -> 2:15 地精修补匠"
+    },
+    {
+     "pid": 4,
+     "name": "khuyen",
+     "race": "random",
+     "result": null,
+     "apm": 396,
+     "tech": {},
+     "heroes": [
+      "大法师"
+     ],
+     "bo_summary": "0:10 国王祭坛 -> 0:22 兵营 -> 0:37 农场 -> 0:56 农场 -> 1:08 农场 -> 1:18 大法师 -> 2:09 农场"
+    },
+    {
+     "pid": 5,
+     "name": "BAR-2-1-RMA",
+     "race": "human",
+     "result": null,
+     "apm": 852,
+     "tech": {},
+     "heroes": [
+      "大法师"
+     ],
+     "bo_summary": "0:06 国王祭坛 -> 0:21 农场 -> 0:23 兵营 -> 0:50 农场 -> 1:09 大法师 -> 1:52 农场"
+    }
+   ]
+  }
+ ],
+ "version": 1
+}
