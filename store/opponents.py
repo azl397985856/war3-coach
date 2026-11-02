@@ -11,20 +11,39 @@ from collections import Counter, defaultdict
 
 DEFAULT_DB = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'data', 'opponents.json')
 
-# LeftGame resultflag (w3g.py 语义)
+# LeftGame resultflag (w3g.py 语义 + KK 实测校准 2026-11-03)
 FLAG_LOST = 0x08
 FLAG_WON = 0x09
+# KK 平台 1v1 实测: 败者退出走 flag=0x0d 且游戏随即(<5s)结束;
+# 用"离场即终局"约束防误判中途退出(多人局普通退出也是 0x0d)。
+FLAG_KK_LOST = 0x0D
+_END_WIN_MS = 5000
 
 
 def game_result(replay):
     """从 LeftGame 事件推断各 pid 胜负 -> {pid: 'win'|'loss'|None}"""
     result = {}
-    for e in replay.events:
+    events = list(replay.events)
+    if not events:
+        return result
+    end_ms = events[-1].time
+    for e in events:
         if type(e).__name__ == 'LeftGame':
             if e.resultflag == FLAG_LOST:
                 result[e.player_id] = 'loss'
             elif e.resultflag == FLAG_WON:
                 result[e.player_id] = 'win'
+            elif (e.resultflag == FLAG_KK_LOST
+                  and end_ms - e.time <= _END_WIN_MS):
+                result[e.player_id] = 'loss'
+    # 败者已判 -> 同局其余人判胜 (1v1 语义; 多人局保守不判)
+    losers = [pid for pid, r in result.items() if r == 'loss']
+    if losers:
+        n_players = len(replay.real_players())
+        if n_players == 2:
+            for p in replay.real_players():
+                if result.get(p.pid) is None:
+                    result[p.pid] = 'win'
     return result
 
 

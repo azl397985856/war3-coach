@@ -12,6 +12,7 @@ import os
 import w3g as _w3g
 
 _UNITS_JSON = os.path.join(os.path.dirname(__file__), 'data', 'units.json')
+_MAPHASH_JSON = os.path.join(os.path.dirname(__file__), 'data', 'map_hash.json')
 
 
 def _load_units():
@@ -20,6 +21,17 @@ def _load_units():
 
 
 UNITS = _load_units()
+
+
+def _load_maphash():
+    try:
+        with open(_MAPHASH_JSON, encoding='utf-8') as f:
+            return json.load(f)
+    except OSError:
+        return {}
+
+
+MAPHASH = _load_maphash()
 
 
 class Player:
@@ -66,7 +78,7 @@ class Replay:
             pl.is_observer = s.team in (12, 24) or getattr(s, 'status', '') == 'observer'
         self.players = list(players.values())
         self.by_pid = players
-        self.map = f.mapname
+        self.map = _pretty_map(f.mapname)
         self.game_name = f.game_name
         self.version = f.version_num          # 主版本号 26/29/32...
         self.build = f.build_num
@@ -95,3 +107,13 @@ class Replay:
                 for p in self.players
             ],
         }
+
+def _pretty_map(mapname):
+    """KK 天梯图是 hash 文件名, 映射表里查得到就显示名。"""
+    if not mapname:
+        return mapname
+    base = mapname.replace('/', '\\').split('\\')[-1]
+    stem = base.rsplit('.', 1)[0].lower()
+    if stem in MAPHASH:
+        return MAPHASH[stem]
+    return base
