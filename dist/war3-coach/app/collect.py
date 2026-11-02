@@ -204,20 +204,46 @@ def fmt_t(sec):
     return '%02d:%02d' % (int(sec // 60), int(sec % 60))
 
 
+def resolve_me(result, me):
+    """把配置的 me 对到本局玩家名。KK 账号是数字, 游戏内显示名是昵称——
+    对不上时让用户从本局参与者里选一次 (选中后自动改写 我的ID.txt)。"""
+    players = result['players']
+    if me in players:
+        return me, True
+    names = [p['name'] for p in players.values()]
+    print('\n  [ID 对不上] 我的ID.txt 里写的是「%s」, 但这局参与者是:' % me)
+    for i, n in enumerate(names, 1):
+        p = players[[k for k, v in players.items() if v['name'] == n][0]]
+        print('   %d) %s (%s)' % (i, n, p['race']))
+    try:
+        pick = input('哪一个是你的对战昵称? 输入序号 (回车跳过本局): ').strip()
+    except EOFError:
+        pick = ''
+    if pick.isdigit() and 1 <= int(pick) <= len(names):
+        me = names[int(pick) - 1]
+        try:
+            with open(ME_FILE, 'w', encoding='utf-8') as f:
+                f.write(me)
+            print('  已把 我的ID.txt 更新为「%s」, 以后不再问。' % me)
+        except OSError:
+            pass
+        return me, True
+    return None, False
+
+
 def summarize(path, me):
     from parser.replay import Replay
     from analyzer.game import analyze
 
     r = Replay(path)
     result = analyze(r)
+    me, ok = resolve_me(result, me)
+    if not ok:
+        return None
     players = result['players']
-    mine = next((p for p in players.values() if p['name'] == me), None)
+    mine = players[[k for k, v in players.items() if v['name'] == me][0]]
     opps = [p for p in players.values() if p['name'] != me]
     head = os.path.basename(path)
-    if mine is None:
-        print('  [未识别到 %s] 参与者: %s' % (
-            me, ', '.join('%s(%s)' % (p['name'], p['race']) for p in players.values())))
-        return None
     line = '%s(%s)' % (me, mine['race'])
     for o in opps:
         line += '  vs %s(%s)' % (o['name'], o['race'])
@@ -226,7 +252,7 @@ def summarize(path, me):
     heroes = next((p for p in opps), None)
     if heroes and heroes['heroes']:
         print('  对手英雄: %s' % ' -> '.join(h['cn'] for h in heroes['heroes']))
-    return r, result
+    return r, result, me
 
 
 DB_LOCAL = os.path.join(APP, 'data', 'opponents.json')
@@ -249,7 +275,7 @@ def load_conf_file(directory, name):
 
 
 def bundle_zip(made, me, stats_line):
-    """把今天新回放+对手库打成一个包, 存工具目录 (微信/网盘/邮箱随便传)"""
+    """把今天新回放+对手库+原始分析打成一个包, 存工具目录 (微信/网盘/邮箱随便传)"""
     if not made:
         return None
     import zipfile
@@ -258,6 +284,9 @@ def bundle_zip(made, me, stats_line):
     with zipfile.ZipFile(out, 'w', zipfile.ZIP_DEFLATED) as z:
         for p in made:
             z.write(p, 'replays/%s/%s' % (day, os.path.basename(p)))
+            aj = p + '.analysis.json'
+            if os.path.exists(aj):
+                z.write(aj, 'state/analyses/%s.analysis.json' % os.path.basename(p))
         if os.path.exists(DB_LOCAL):
             z.write(DB_LOCAL, 'state/opponents.json')
         if me:
@@ -332,16 +361,26 @@ def main():
     me = me_name()
     db = None
     ok = 0
+    import json as _json
     for i, path in enumerate(made, 1):
         print('[%d/%d]' % (i, total))
         try:
             out = summarize(path, me)
         except Exception as e:
             print('  解析失败(%s), 文件已保存, 回家再处理' % e)
-            continue
+            out = None
+        r = result = None
+        if out:
+            r, result, me = out
+        # 原始分析 JSON 永远落盘 (ID 没配对也不丢数据, 回家后可补处理)
+        try:
+            if result is not None:
+                with open(path + '.analysis.json', 'w', encoding='utf-8') as f:
+                    _json.dump(result, f, ensure_ascii=False)
+        except OSError:
+            pass
         if out is None:
             continue
-        r, result = out
         try:
             if db is None:
                 from store.opponents import OpponentDB
@@ -350,13 +389,13 @@ def main():
             ok += 1
         except Exception as e:
             print('  入库失败(不影响保存): %s' % e)
-    if db is not None:
+    if db is not None and ok:
         s = db.my_stats(me)
         stats_line = '累计: %d 局, 胜率 %s%%, 最近 %s' % (
             s['total'], s['winrate'], s['streak'] or '-')
         print('\n入对手库 %d 局。%s' % (ok, stats_line))
     else:
-        stats_line = '本局未入库'
+        stats_line = '本局未入库(ID 对不上也会把分析数据带回家, 不丢)'
 
     # 万能兜底: 打成一个 zip, 微信/网盘/邮箱随便传
     zip_path = bundle_zip(made, me, stats_line)
