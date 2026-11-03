@@ -199,9 +199,12 @@ def coach_player(p, opps, game_len_s):
                 'gcel': '群体治疗卷轴', 'oli2': '毒球', 'ofir': '火球'}
         txt = ', '.join('%s x%d' % (nice.get(k, k), v) for k, v in
                         sorted(items.items(), key=lambda x: -x[1]))
-        out.append({'level': 'info', 'title': '道具: %s' % txt,
-                    'body': '手册 5.7: 头环第一目标; 买粉骚扰强于空手; 残血现买现吃。'
-                            '注意毒球/电球的使用率——对位 UD/HUM 时球的收益常被低估。'})
+        if race == 'orc':
+            body = ('手册 5.7: 头环第一目标; 买粉骚扰强于空手; 残血现买现吃。'
+                    '注意毒球/电球的使用率——对位 UD/HUM 时球的收益常被低估。')
+        else:
+            body = '该玩家的实际购买清单 (以对手视角看他的打法习惯: 出门装/续航/保命配比)。'
+        out.append({'level': 'info', 'title': '道具: %s' % txt, 'body': body})
 
     # 8. 下局重点练 (优先级排序, 最多 3 条)
     priority.sort(key=lambda x: x[0])
