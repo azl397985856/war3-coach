@@ -105,15 +105,15 @@ class OpponentDB:
                 'bo_summary': summarize_bo(p['bo']),
             }
             rec['players'].append(entry)
-        # 教练点评 (规则版, 以我方视角) 直接算好存进记录——复盘页零计算展示
+        # 教练点评: 双方视角各算一份 {玩家名: [点评]}——复盘页切换「我是谁」
+        # 点评跟着换视角。旧格式(list)按录入者视角兜底。
         try:
-            me_p = next((p for p in analysis['players'].values()
-                         if p['name'] == my_name), None)
-            opp_p = next((p for p in analysis['players'].values()
-                          if p['name'] != my_name), None)
-            if me_p:
-                rec['coach'] = coach_player(me_p, [opp_p] if opp_p else [],
-                                            meta['length_s'])
+            rec['coach_v2'] = {}
+            names = list(analysis['players'].keys())
+            for pid, pl in analysis['players'].items():
+                opps = [analysis['players'][q] for q in names if q != pid]
+                rec['coach_v2'][pl['name']] = coach_player(
+                    pl, opps, meta['length_s'])
         except Exception:
             pass
         self.db['games'].append(rec)
