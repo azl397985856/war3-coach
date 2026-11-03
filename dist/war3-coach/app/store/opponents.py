@@ -78,6 +78,7 @@ class OpponentDB:
 
     def record(self, replay, my_name, analysis=None, won=None):
         """录入一局。won 缺省时用回放胜负信号。"""
+        from analyzer.coach import coach_player
         result = game_result(replay)
         meta = replay.summary()
         date = time.strftime('%Y-%m-%d %H:%M', time.localtime())
@@ -87,6 +88,7 @@ class OpponentDB:
             'date': date,
             'ts': int(time.time()),
             'length_s': meta['length_s'],
+            'me': my_name,          # 复盘页归属判断的直接依据 (KK 数字账号≠游戏名)
             'players': [],
         }
         for pid, p in analysis['players'].items():
@@ -103,6 +105,17 @@ class OpponentDB:
                 'bo_summary': summarize_bo(p['bo']),
             }
             rec['players'].append(entry)
+        # 教练点评 (规则版, 以我方视角) 直接算好存进记录——复盘页零计算展示
+        try:
+            me_p = next((p for p in analysis['players'].values()
+                         if p['name'] == my_name), None)
+            opp_p = next((p for p in analysis['players'].values()
+                          if p['name'] != my_name), None)
+            if me_p:
+                rec['coach'] = coach_player(me_p, [opp_p] if opp_p else [],
+                                            meta['length_s'])
+        except Exception:
+            pass
         self.db['games'].append(rec)
         self.save()
         return rec

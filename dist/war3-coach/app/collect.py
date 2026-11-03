@@ -114,6 +114,8 @@ def collect():
         drives = [d for d in drives if not SELFDIR.startswith(d.lower())]
 
     dirs, timed_out = {}, False
+    # 注册表候选: InstallPath 本身 + 向下两层子目录都找 Replay* (KK 平台的
+    # InstallPath 可能指向客户端目录, 游戏和 Replay 在其子目录里)
     reg = registry_paths()
     if reg:
         print('[1/3] 注册表找到魔兽目录:')
@@ -124,29 +126,67 @@ def collect():
                 p = os.path.join(ip, rd)
                 if os.path.isdir(p):
                     dirs[p] = None
-    if not dirs:
-        print('[1/3] 浅扫各分区找游戏 Replay 目录 (45 秒内)...')
-        dirs, timed_out = shallow_find(drives)
+            try:
+                lvl1 = [os.path.join(ip, x) for x in os.listdir(ip)
+                        if os.path.isdir(os.path.join(ip, x))]
+            except OSError:
+                lvl1 = []
+            for d1 in lvl1:
+                for rd in REPLAY_SUBDIRS:
+                    p = os.path.join(d1, rd)
+                    if os.path.isdir(p):
+                        dirs[p] = None
+                try:
+                    lvl2 = [os.path.join(d1, x) for x in os.listdir(d1)
+                            if os.path.isdir(os.path.join(d1, x))]
+                except OSError:
+                    continue
+                for d2 in lvl2:
+                    for rd in REPLAY_SUBDIRS:
+                        p = os.path.join(d2, rd)
+                        if os.path.isdir(p):
+                            dirs[p] = None
+    # 浅扫总是执行并与注册表候选合并 (单靠注册表会漏 KK 自装目录)
+    print('[2/3] 浅扫各分区找游戏 Replay 目录 (45 秒内)...')
+    shallow, timed_out = shallow_find(drives)
+    for p in shallow:
+        dirs[p] = None
 
+    files = {}
     if dirs:
-        print('[2/3] 找到 %d 个 Replay 目录:' % len(dirs))
-        for p in dirs:
-            print('   ', p)
-        files = {}
-        for dp in dirs:
+        print('候选 Replay 目录 (括号内=搜到的录像数):')
+        for dp in sorted(dirs):
+            n = 0
             try:
                 for fn in os.listdir(dp):
                     if fn.lower().endswith(EXTS):
                         p = os.path.join(dp, fn)
                         try:
                             files[p] = os.path.getsize(p)
+                            n += 1
                         except OSError:
                             pass
             except OSError:
                 pass
-    else:
-        print('[2/3] 目标搜索没找到, 深扫全盘近 60 天的 .w3g (90 秒内)...')
+            print('   %s  (%d)' % (dp, n))
+    if not files:
+        print('自动搜索没找到录像 (注册表+浅扫都空), 深扫全盘近 60 天 (90 秒内)...')
         files, timed_out = deep_find(drives, time.time() - DAYS_KEEP * 86400)
+    if not files:
+        # 手动路径兜底: 网吧环境路径千奇百怪, 游戏内看一眼路径手输最快
+        try:
+            manual = input('手动输入游戏 Replay 文件夹完整路径 (直接回车跳过): ').strip().strip('"')
+        except EOFError:
+            manual = ''
+        if manual and os.path.isdir(manual):
+            for dirpath, dirnames, filenames in os.walk(manual):
+                for fn in filenames:
+                    if fn.lower().endswith(EXTS):
+                        p = os.path.join(dirpath, fn)
+                        try:
+                            files[p] = os.path.getsize(p)
+                        except OSError:
+                            pass
 
     if timed_out:
         print('   (搜索到时限, 如有遗漏下次再跑或机器太慢属正常)')
