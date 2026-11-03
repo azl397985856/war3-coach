@@ -53,6 +53,23 @@ def level_at(tl, t):
     return lv
 
 
+def export_metrics(p):
+    """训练指标 (跨局趋势的地基): 断档/等级曲线/升本时点/APM。
+    全部从单局分析导出, record 时存进对手库。
+    断档只统计前 12 分钟 (开局补农意识; 后期不补农是战术选择不是失误)。"""
+    gaps = peasant_gaps(p, until=720)
+    tl = hero_level_timeline(p)
+    return {
+        'gap_s': sum(g[0] for g in gaps),      # 农民断档总秒数
+        'gap_n': len(gaps),                     # 断档次数
+        'lvl5': level_at(tl, 300),              # 5 分钟英雄总等级
+        'lvl10': level_at(tl, 600),
+        'lvl15': level_at(tl, 900),
+        't2': p.get('tech', {}).get('tier2'),   # 升二本时点(秒)
+        'apm': p.get('apm_total'),
+    }
+
+
 def _fmt(sec):
     return '%02d:%02d' % (int(sec // 60), int(sec % 60))
 

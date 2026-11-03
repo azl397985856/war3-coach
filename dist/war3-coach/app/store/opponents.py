@@ -116,6 +116,15 @@ class OpponentDB:
                     pl, opps, meta['length_s'])
         except Exception:
             pass
+        # 训练指标 (跨局趋势: 断档/等级/升本/APM 随时间的曲线)
+        try:
+            from analyzer.coach import export_metrics
+            me_p = next((p for p in analysis['players'].values()
+                         if p['name'] == my_name), None)
+            if me_p:
+                rec['metrics'] = export_metrics(me_p)
+        except Exception:
+            pass
         self.db['games'].append(rec)
         self.save()
         return rec
