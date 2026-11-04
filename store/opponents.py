@@ -125,6 +125,18 @@ class OpponentDB:
                 rec['metrics'] = export_metrics(me_p)
         except Exception:
             pass
+        # 复盘详情数据: 双方 12 分钟内的逐事件时间轴 + 分分钟 APM
+        # (war3-lab 详情展开渲染左右时间轴/APM 图用)
+        try:
+            detail = {}
+            for pl in analysis['players'].values():
+                detail[pl['name']] = {
+                    'bo': [e for e in pl.get('bo', []) if e['t'] <= 720],
+                    'apm': pl.get('apm_by_minute') or [],
+                }
+            rec['detail'] = detail
+        except Exception:
+            pass
         self.db['games'].append(rec)
         self.save()
         return rec
