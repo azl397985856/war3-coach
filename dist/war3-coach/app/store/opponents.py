@@ -44,6 +44,31 @@ def game_result(replay):
             for p in replay.real_players():
                 if result.get(p.pid) is None:
                     result[p.pid] = 'win'
+        return result
+
+    # --- 信号 2: 末段 gg 聊天 (最后 60 秒内打 'gg' 且游戏随即结束 = 认输,
+    #     KK 实测两局命中; 双方都打 gg = 平局致谢不判) ---
+    # --- 信号 3: '-draw' = KK 平台协商平局命令 ---
+    gg_pids = []
+    draw_ts = []
+    for e in events:
+        tn = type(e).__name__
+        if 'Chat' not in tn:
+            continue
+        txt = (getattr(e, 'text', getattr(e, 'msg', '')) or '').strip().lower()
+        if txt == '-draw':
+            draw_ts.append(e.time)
+        elif end_ms - e.time <= 60000 and txt in ('gg', 'gg.', 'ggg'):
+            gg_pids.append(e.player_id)
+    if draw_ts and end_ms - min(draw_ts) <= 60000:
+        return {p.pid: 'draw' for p in replay.real_players()}
+    if len(set(gg_pids)) == 1:
+        loser = gg_pids[0]
+        result[loser] = 'loss'
+        if len(replay.real_players()) == 2:
+            for p in replay.real_players():
+                if p.pid != loser:
+                    result[p.pid] = 'win'
     return result
 
 
@@ -114,6 +139,20 @@ class OpponentDB:
                 opps = [analysis['players'][q] for q in names if q != pid]
                 rec['coach_v2'][pl['name']] = coach_player(
                     pl, opps, meta['length_s'])
+        except Exception:
+            pass
+        # 尾盘盘面推断 (无官方信号局的兜底, 置信度标注, 复盘页可改判)
+        try:
+            res_map = game_result(replay)
+            me_p = next((p for p in analysis['players'].values()
+                         if p['name'] == my_name), None)
+            opp_p = next((p for p in analysis['players'].values()
+                          if p['name'] != my_name), None)
+            if me_p and opp_p and not res_map.get(int(me_p.get('pid', -1))):
+                from analyzer.coach import infer_tailside
+                g = infer_tailside(me_p, opp_p, meta['length_s'])
+                if g:
+                    rec['guess'] = g
         except Exception:
             pass
         # 训练指标 (跨局趋势: 断档/等级/升本/APM 随时间的曲线)

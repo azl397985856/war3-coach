@@ -22,17 +22,30 @@ _T2_BUILD_WIN = 150
 # 农民 fourCC (断档分析对象)
 PEASANTS = {'opeo', 'hpea', 'uaco', 'ewsp'}
 # 农民训练时长+点击容差 (间隔超过它=生产队列空过)
-GAP_THRESHOLD = 19
+TRAIN_S = 15.0   # 苦工训练时长 (1.27 UnitBalance bldtm=15)
 
 
-def peasant_gaps(p, until=720):
-    """农民生产断档: 相邻训练事件间隔超过训练时长 => 生产队列空了一段时间。
-    返回 [(gap_seconds, gap_end_t), ...] 按时间序。注意: 被杀农民也会造成
-    断档, 文案要区分「忘补」与「被骚扰」。"""
-    ts = [e['t'] for e in p['bo']
-          if e['kind'] == 'train' and e['id'] in PEASANTS and e['t'] <= until]
-    return [(round(b - a), round(b)) for a, b in zip(ts, ts[1:])
-            if b - a > GAP_THRESHOLD]
+def peasant_idle(p, until=720):
+    """农民生产空闲 (v3 队列模拟): 点击入队(串行 15s/个), 攒队列不罚——
+    只统计生产设施真正空转的时间 (上一个出生后到下一次点击前)。
+    旧「相邻点击间隔>19s=断档」会把攒队列误判成断档 (2026-11-05 用户实测推翻)。"""
+    clicks = sorted(e['t'] for e in p.get('bo', [])
+                    if e.get('kind') == 'train' and e.get('id') in PEASANTS
+                    and e['t'] <= until)
+    if not clicks:
+        return {'idle': 0.0, 'clicks': 0, 'longest': 0.0}
+    idle = 0.0
+    longest = 0.0
+    last_spawn = clicks[0] + TRAIN_S
+    for c in clicks[1:]:
+        if c > last_spawn:
+            gap = c - last_spawn
+            idle += gap
+            longest = max(longest, gap)
+            last_spawn = c + TRAIN_S
+        else:
+            last_spawn += TRAIN_S
+    return {'idle': round(idle), 'clicks': len(clicks), 'longest': round(longest)}
 
 
 def hero_level_timeline(p):
@@ -101,11 +114,11 @@ def export_metrics(p):
     """训练指标 (跨局趋势的地基): 断档/等级曲线/升本时点/APM。
     全部从单局分析导出, record 时存进对手库。
     断档只统计前 12 分钟 (开局补农意识; 后期不补农是战术选择不是失误)。"""
-    gaps = peasant_gaps(p, until=720)
+    idle = peasant_idle(p, until=720)
     tl = hero_level_timeline(p)
     return {
-        'gap_s': sum(g[0] for g in gaps),      # 农民断档总秒数
-        'gap_n': len(gaps),                     # 断档次数
+        'gap_s': round(idle['idle']),           # 生产空闲总秒数 (设施空转, v3 口径)
+        'gap_n': idle['clicks'],                # 苦工点击次数
         'lvl5': level_at(tl, 300),              # 5 分钟英雄总等级
         'lvl10': level_at(tl, 600),
         'lvl15': level_at(tl, 900),
@@ -178,28 +191,23 @@ def coach_player(p, opps, game_len_s):
                 out.append({'level': 'good', 'title': '升二本 %s — 比参考快 %d 秒' % (_fmt(t2), -delta),
                             'body': '快不一定是好事: 确认农民数和防守没有欠账。'})
 
-    # 2. 农民断档 (根因 #1)
-    gaps = peasant_gaps(p)
-    if gaps:
-        total = sum(g[0] for g in gaps)
-        worst = max(gaps)
-        early = [g for g in gaps if g[1] <= 480]
-        lvl = 'warn' if total > 45 or len(gaps) >= 4 else 'info'
-        drill = ('每次点完苦工，镜头切回基地看一眼生产队列再走' if race == 'orc'
-                 else '每 10 秒扫一眼主基地生产队列')
-        out.append({'level': lvl, 'title': '农民断档: %d 次 / 共 %d 秒 (前 12 分钟)' % (len(gaps), total),
-                    'body': '最长一次 %d 秒，结束于 %s。断档原因两种：被骚扰杀农(该练防骚扰)或'
-                            '忘了点下一轮(纯肌肉记忆)。修法：%s，把「生产队列永远不为空」当成每局唯一目标练 5 局，'
-                            '其他都不管。这一条练熟，升本节拍自动到位。'
-                            % (worst[0], _fmt(worst[1]), drill)})
-        if early and (ref is None or (t2 and t2 > ref + 20)):
-            gap_sum = sum(g[0] for g in early)
-            slow = ('升本慢 %d 秒的主因' % (t2 - ref)) if (ref and t2) else '升本节奏拖累项'
-            priority.append((2, '补齐农民断档 (本局断档 %d 秒, %s)' % (gap_sum, slow),
-                             '开局 8 分钟内每 10 秒看一眼主基地生产队列。'))
-    else:
-        out.append({'level': 'good', 'title': '农民生产: 前 12 分钟无断档',
-                    'body': '生产队列意识不错，保持。'})
+    # 2. 苦工生产空闲 (v3 队列模拟: 只算设施空转, 攒队列不罚)
+    idle = peasant_idle(p)
+    if idle['clicks']:
+        if idle['idle'] <= 15:
+            out.append({'level': 'good', 'title': '苦工生产: 空闲仅 %d 秒 (优秀)' % idle['idle'],
+                        'body': '大厅生产设施几乎没空转过，保持这个意识。'})
+        else:
+            lvl = 'warn' if idle['idle'] > 45 else 'info'
+            grade = '良好' if idle['idle'] <= 30 else '偏多'
+            out.append({'level': lvl,
+                        'title': '苦工生产空闲: %d 秒 / 前 12 分钟 (%s)' % (idle['idle'], grade),
+                        'body': '口径: 只统计大厅设施真正空转的时间(攒队列不罚)。业余参考 '
+                                '<15s 优秀、<30s 良好。注意区分: 被杀后没补(该练防骚扰) vs '
+                                '忘了续队列(点完建筑先回大厅续一个再走)。'})
+        if idle['idle'] > 45:
+            priority.append((2, '压缩苦工生产空闲 (本局 %d 秒, 良好线 30 秒)' % idle['idle'],
+                             '点完建筑先回大厅续一个苦工再走。'))
 
     # 3. 英雄练级速度对比 (根因 #2)
     my_tl = hero_level_timeline(p)
