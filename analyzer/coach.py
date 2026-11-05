@@ -53,6 +53,50 @@ def level_at(tl, t):
     return lv
 
 
+def infer_tailside(p, opp, end_s):
+    """尾盘盘面推断 (无官方信号局的兜底): 终局等级差 + 尾盘生产停摆。
+    返回 {'guess': 'win'|'loss', 'confidence': 'high'|'medium', 'evidence': [..]}
+    或 None (证据不充分)。 guess 是 p 的结果。"""
+    if not opp:
+        return None
+    ev = []
+    my_tl, op_tl = hero_level_timeline(p), hero_level_timeline(opp)
+    lv_gap = level_at(my_tl, end_s) - level_at(op_tl, end_s)
+    if abs(lv_gap) >= 3:
+        ev.append(('level', lv_gap, f'终局英雄等级差 {abs(lv_gap)} 级 (你 Lv{level_at(my_tl,end_s)} vs 对面 Lv{level_at(op_tl,end_s)})'))
+    def late_acts(x):
+        return sum(1 for e in x.get('bo', []) if e['t'] >= end_s - 180)
+    my_a, op_a = late_acts(p), late_acts(opp)
+    def last_prod(x):
+        ts = [e['t'] for e in x.get('bo', []) if e['kind'] in ('train', 'build')]
+        return (end_s - ts[-1]) if ts else end_s
+    my_last, op_last = last_prod(p), last_prod(opp)
+    stall = None
+    if my_last - op_last > 120 and my_a <= op_a:
+        stall = ('me', f'尾盘生产停摆 (你 {int(my_last//60)}:{int(my_last%60):02d} 前就停了, 对面一直有动作)')
+    elif op_last - my_last > 120 and op_a <= my_a:
+        stall = ('opp', f'尾盘生产停摆 (对面 {int(op_last//60)}:{int(op_last%60):02d} 前就停了, 你一直有动作)')
+    if stall:
+        ev.append(('stall', stall[0], stall[1]))
+    votes = [x[1] for x in ev]
+    votes += [lv_gap > 0]
+    votes = ([x[1] for x in ev])
+    # 汇总: level(负值=对面高=我输) 与 stall 指向一致才给结论
+    level_points_to = None
+    if lv_gap <= -3: level_points_to = 'loss'
+    elif lv_gap >= 3: level_points_to = 'win'
+    if level_points_to and stall and stall[0] == ('me' if level_points_to=='loss' else 'opp'):
+        return {'guess': level_points_to, 'confidence': 'high',
+                'evidence': [x[2] for x in ev]}
+    if stall:
+        return {'guess': 'loss' if stall[0] == 'me' else 'win',
+                'confidence': 'medium', 'evidence': [x[2] for x in ev]}
+    if level_points_to:
+        return {'guess': level_points_to, 'confidence': 'medium',
+                'evidence': [x[2] for x in ev]}
+    return None
+
+
 def export_metrics(p):
     """训练指标 (跨局趋势的地基): 断档/等级曲线/升本时点/APM。
     全部从单局分析导出, record 时存进对手库。
