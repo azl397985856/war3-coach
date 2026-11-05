@@ -154,20 +154,20 @@ def collect():
 
     files = {}
     if dirs:
-        print('候选 Replay 目录 (括号内=搜到的录像数):')
+        print('候选 Replay 目录 (括号内=递归搜到的录像数):')
         for dp in sorted(dirs):
             n = 0
-            try:
-                for fn in os.listdir(dp):
+            # KK 天梯录像在 Replay/kkduizhangame/war3vs/年/月/日/ 的日期树里,
+            # 必须递归子目录, 只列顶层会漏掉全部天梯局 (实测教训)
+            for dirpath, dirnames, filenames in os.walk(dp):
+                for fn in filenames:
                     if fn.lower().endswith(EXTS):
-                        p = os.path.join(dp, fn)
+                        p = os.path.join(dirpath, fn)
                         try:
                             files[p] = os.path.getsize(p)
                             n += 1
                         except OSError:
                             pass
-            except OSError:
-                pass
             print('   %s  (%d)' % (dp, n))
     if not files:
         print('自动搜索没找到录像 (注册表+浅扫都空), 深扫全盘近 60 天 (90 秒内)...')
