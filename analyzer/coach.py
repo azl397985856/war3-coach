@@ -36,16 +36,20 @@ def peasant_idle(p, until=720):
         return {'idle': 0.0, 'clicks': 0, 'longest': 0.0}
     idle = 0.0
     longest = 0.0
+    worst_t = None
     last_spawn = clicks[0] + TRAIN_S
     for c in clicks[1:]:
         if c > last_spawn:
             gap = c - last_spawn
             idle += gap
-            longest = max(longest, gap)
+            if gap > longest:
+                longest = gap
+                worst_t = round(last_spawn)   # 空转起点=上一个出生时刻
             last_spawn = c + TRAIN_S
         else:
             last_spawn += TRAIN_S
-    return {'idle': round(idle), 'clicks': len(clicks), 'longest': round(longest)}
+    return {'idle': round(idle), 'clicks': len(clicks), 'longest': round(longest),
+            'worst_t': worst_t}
 
 
 def hero_level_timeline(p):
@@ -185,6 +189,44 @@ def detect_core(p, opp, end_s, result):
         if flying >= 5 and my_u.get('otbr', 0) >= 3:
             return f'转型应对到位: 对面 {flying} 个空军，你的蝙蝠如约而至——保持侦察→针对的反射。'
     return None
+
+
+def critical_marks(p, opp, end_s):
+    """失误/关键标记: 插进时间轴的 ⚠ 行。只给数据坐实的, 不堆砌。"""
+    marks = []
+    idle = peasant_idle(p)
+    if idle['idle'] > 20 and idle.get('worst_t') is not None:
+        marks.append({'t': idle['worst_t'],
+                      'text': f'苦工生产空转 {idle["longest"]:.0f} 秒（忘续队列或被杀未补）'})
+    t2 = p.get('tech', {}).get('tier2')
+    key, desc, _ = identify_opening(p)
+    ref = {'double': 161, 'single': 170, 'fasttech': 130}.get(key)
+    if t2 and ref and t2 > ref + 20:
+        marks.append({'t': t2,
+                      'text': f'升二本 {int(t2//60):02d}:{int(t2%60):02d}，比 {desc[0]} 参考 {int(ref//60):02d}:{int(ref%60):02d} 慢 {t2-ref:.0f} 秒'})
+    prod = [e['t'] for e in p.get('bo', [])
+            if e.get('kind') in ('train', 'build') and e['t'] <= end_s]
+    if prod and end_s - prod[-1] > 120:
+        gap = end_s - prod[-1]
+        marks.append({'t': prod[-1],
+                      'text': f'最后一次生产在 {int(prod[-1]//60):02d}:{int(prod[-1]%60):02d}，此后停摆 {gap:.0f} 秒至终局'})
+    if opp:
+        op_u = opp.get('units_trained') or {}
+        flying = [e for e in opp.get('bo', [])
+                  if e.get('id') in ('hgyr', 'hgry', 'ufro') and e.get('t') <= end_s]
+        fly_n = sum(op_u.get(k, 0) for k in ('hgyr', 'hgry', 'ufro'))
+        if flying and fly_n >= 3:
+            t0 = flying[0]['t']
+            marks.append({'t': t0,
+                          'text': f'对面首架空军出现（最终 {fly_n} 个）——检查我方对空应对'})
+        heal = [e for e in opp.get('bo', [])
+                if e.get('id') in ('uobs', 'hmpr') and e.get('t') <= end_s]
+        heal_n = sum(op_u.get(k, 0) for k in ('uobs', 'hmpr'))
+        if heal and heal_n >= 3:
+            marks.append({'t': heal[0]['t'],
+                          'text': f'对面奶系单位开工（最终 {heal_n} 个）——白牛/驱散应对了吗'})
+    marks.sort(key=lambda m: m['t'])
+    return marks
 
 
 def export_metrics(p):

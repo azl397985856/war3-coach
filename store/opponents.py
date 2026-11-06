@@ -176,6 +176,17 @@ class OpponentDB:
                     rec['guess'] = g
         except Exception:
             pass
+        # 失误标记 (时间轴 ⚠ 行)
+        try:
+            from analyzer.coach import critical_marks
+            opp_p1 = next((v for v in analysis['players'].values()
+                           if v['name'] != my_name), None)
+            me_p1 = next((v for v in analysis['players'].values()
+                          if v['name'] == my_name), None)
+            if me_p1:
+                rec['marks'] = critical_marks(me_p1, opp_p1, meta['length_s'])
+        except Exception:
+            pass
         # 训练指标 (跨局趋势: 断档/等级/升本/APM 随时间的曲线)
         try:
             from analyzer.coach import export_metrics
