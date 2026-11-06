@@ -141,6 +141,27 @@ class OpponentDB:
                     pl, opps, meta['length_s'])
         except Exception:
             pass
+        # 核心输点/赢因 (转型应对检测器, 一句话)
+        try:
+            res_map0 = game_result(replay)
+            me_pid = next((int(k) for k, v in analysis['players'].items()
+                           if v['name'] == my_name), None)
+            me_res = res_map0.get(me_pid) or next(
+                (p['result'] for p in rec['players'] if p['name'] == my_name), None)
+            opp_p0 = next((v for v in analysis['players'].values()
+                           if v['name'] != my_name), None)
+            me_p0 = next((v for v in analysis['players'].values()
+                          if v['name'] == my_name), None)
+            if me_p0 and opp_p0 and not me_res:
+                from analyzer.coach import infer_tailside
+                gg = infer_tailside(me_p0, opp_p0, meta['length_s'])
+                me_res = gg['guess'] if gg else None
+            from analyzer.coach import detect_core
+            core = detect_core(me_p0, opp_p0, meta['length_s'], me_res)
+            if core:
+                rec['core'] = core
+        except Exception:
+            pass
         # 尾盘盘面推断 (无官方信号局的兜底, 置信度标注, 复盘页可改判)
         try:
             res_map = game_result(replay)

@@ -110,6 +110,73 @@ def infer_tailside(p, opp, end_s):
     return None
 
 
+# ============ 核心输点检测器 (转型应对) ============
+# 数据驱动的规则: 输局按「对面成型部队 vs 我方应对」找最致命的一条;
+# 不凑模板, 检测不到才退回节奏类归因。
+
+def detect_core(p, opp, end_s, result):
+    """返回一句话核心输点/赢因 (str) 或 None。
+    机制备忘(2026-11-06 与用户核对): 狼骑诱捕/UD蛛网是【物理束缚】——
+    不可被驱散(小精灵自爆/牧师/毁灭者都驱不掉), 且可网住魔免单位(破法者等);
+    这是网的核心价值, 任何「被驱散废网」类归因都是错的。"""
+
+    if not opp:
+        return None
+    my_u = p.get('units_trained') or {}
+    op_u = opp.get('units_trained') or {}
+    opp_race = (opp.get('race') or '').lower()
+
+    if result == 'loss':
+        # 1. 对空缺失: 对面飞行部队成型且我方无蝙蝠/飞龙对空量
+        flying = sum(op_u.get(k, 0) for k in ('hgyr', 'hgry', 'ufro', 'ugrm', 'ehpr', 'hdhw'))
+        my_aa = my_u.get('otbr', 0) + my_u.get('ohun', 0) + my_u.get('otbk', 0)
+        if flying >= 3 and my_u.get('otbr', 0) == 0:
+            return (f'对面 {flying} 个空军（飞行机器/狮鹫）已成型，你全程 0 蝙蝠——'
+                    f'狼骑科多纯地面被白打。下局对面起机场/狮鹫笼，第一时间补 3-4 只蝙蝠。')
+        # 2b. NE 慢科技成型期没压制 (熊鹿成型后等级与部队双落后)
+        if opp_race == 'nightelf':
+            my_tl, op_tl = hero_level_timeline(p), hero_level_timeline(opp)
+            if level_at(my_tl, end_s) - level_at(op_tl, end_s) <= -2 and end_s >= 900:
+                return ('对面 NE 慢科技熊鹿流，成型期（12-18 分钟）你没有压制——等熊鹿+驱散成型，'
+                        '你的网体系被废。对 NE 慢科技：8-14 分钟是他的真空期，部队成型就压基地/抓练级，'
+                        '别让他在安全环境里把熊喂出来。')
+        # 3. 对面奶系成型 (UD 雕像 / HUM 牧师) 且我方无白牛
+        healer = op_u.get('uobs', 0) + op_u.get('hmpr', 0)
+        my_dw = my_u.get('ospw', 0) + my_u.get('ospm', 0)
+        if healer >= 3 and my_dw == 0 and my_u.get('otbk', 0) + my_u.get('ohun', 0) >= 5:
+            return (f'对面 {healer} 个奶系单位成型，你全程 0 白牛——灵魂锁链/骷髅没有驱散，'
+                    f'打不死奶阵容。UD 蜘蛛+雕像全是无甲: 猎头/狂战士（穿刺 150% 克无甲）为主，'
+                    f'补 2-3 白牛驱锁链驱骷髅， 科多吞兵反经济。')
+        # 4. 二本强势期没打 (对面慢科技成型期, 我方部队量占优却拖到后期)
+        my_pop_10 = sum(2 for e in p.get('bo', []) if e['t'] <= 600 and e['kind'] == 'train')
+        op_pop_10 = sum(2 for e in opp.get('bo', []) if e['t'] <= 600 and e['kind'] == 'train')
+        if my_pop_10 > op_pop_10 and end_s >= 900:
+            return ('你 10 分钟部队量领先，但没有在对面成型前压上——优势只维持没兑现。'
+                    '手册: 二本好后部队连点，50 人口+双英雄带地洞前压一波，别拖进对面舒服的后期。')
+        # 5. 二本转型期节奏: 15 分钟等级差落后 (对面三本成型窗撞上你转型减速)
+        my_tl, op_tl = hero_level_timeline(p), hero_level_timeline(opp)
+        if level_at(my_tl, 900) - level_at(op_tl, 900) <= -2:
+            return (f'二本转型期掉了节奏: 15 分钟时英雄等级落后 {abs(level_at(my_tl,900)-level_at(op_tl,900))} 级, '
+                    f'对面三本兵成型时你还没到强势期。转型不是停练——二本期间练级和暴兵要同时跑，'
+                    f'升本的钱从压人口里省, 不是从部队和练级里省。')
+        # 6. 关键等级(5 级)时点落后 >= 90 秒: 转型期练级被挤掉
+        def time_to(tl, lv):
+            for t, l in tl:
+                if l >= lv: return t
+            return None
+        my5, op5 = time_to(my_tl, 5), time_to(op_tl, 5)
+        if my5 and op5 and my5 - op5 >= 90:
+            return (f'5 级英雄时点落后 {int((my5-op5)/60)} 分 {int((my5-op5)%60):02d} 秒'
+                    f'（你 {_fmt(my5)} vs 对面 {_fmt(op5)}）——二本转型期你的练级停了，'
+                    f'对面在同样的时间里把英雄喂大了。')
+        return None
+    if result == 'win':
+        flying = sum(op_u.get(k, 0) for k in ('hgyr', 'hgry', 'ufro', 'ugrm', 'ehpr', 'hdhw'))
+        if flying >= 5 and my_u.get('otbr', 0) >= 3:
+            return f'转型应对到位: 对面 {flying} 个空军，你的蝙蝠如约而至——保持侦察→针对的反射。'
+    return None
+
+
 def export_metrics(p):
     """训练指标 (跨局趋势的地基): 断档/等级曲线/升本时点/APM。
     全部从单局分析导出, record 时存进对手库。
