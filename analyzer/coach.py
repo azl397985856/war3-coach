@@ -107,6 +107,16 @@ def infer_tailside(p, opp, end_s):
     if level_points_to:
         return {'guess': level_points_to, 'confidence': 'medium',
                 'evidence': [x[2] for x in ev]}
+    # 弱证据兜底: 单一倾向也按局面给低置信推断 (用户要求: 判不了按局面判断)
+    my_end, op_end = level_at(my_tl, end_s), level_at(op_tl, end_s)
+    if my_end != op_end:
+        winner = 'win' if my_end > op_end else 'loss'
+        return {'guess': winner, 'confidence': 'low',
+                'evidence': [f'终局英雄等级 你 Lv{my_end} vs 对面 Lv{op_end} (弱证据, 仅供参考)']}
+    if my_a != op_a:
+        winner = 'loss' if my_a < op_a else 'win'
+        return {'guess': winner, 'confidence': 'low',
+                'evidence': [f'尾盘 3 分钟生产动作 你 {my_a} vs 对面 {op_a} (弱证据, 仅供参考)']}
     return None
 
 

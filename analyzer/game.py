@@ -122,7 +122,10 @@ def analyze_player(replay, pid):
                     dy = loc[1] - a.first_base_loc[1]
                     if (dx * dx + dy * dy) ** 0.5 > 2500:
                         a.expansions.append({'t': round(t, 1), 'loc': [round(loc[0]), round(loc[1])]})
-            a.bo.append({'t': round(t, 1), 'kind': kind, 'id': s, 'cn': UNIT_CN[s]})
+            entry = {'t': round(t, 1), 'kind': kind, 'id': s, 'cn': UNIT_CN[s]}
+            if loc:
+                entry['loc'] = [round(loc[0]), round(loc[1])]
+            a.bo.append(entry)
             continue
 
         # 研究 (R 开头); 其余未收录 fourCC 是无分析价值的噪音指令, 丢弃
